@@ -1,0 +1,19 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" controller="EMP_Immigration_Controller">
+           <h3>Immigration Services at CDK </h3>
+            <apex:pageblock title=""> 
+            <apex:repeat value="{!content}" var="policyContent">
+                <apex:outputLabel value="{!policyContent.geographic}" styleClass="policy_subheader"></apex:outputLabel>                
+                <apex:pageBlockSection columns="1"> 
+                    <apex:pageblocktable styleclass="table table-striped table-bordered table-condensed"  value="{!policyContent.contentData}"  var="dtl">
+                        <apex:column styleClass="policy_col_1" headerValue="Current Notifications"  >
+                            <apex:outputLink target="_blank" onclick="" styleClass="policy_link" value="/apex/ContentPreview?contentId={!dtl.Id}">
+                                {!dtl.Title}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column styleClass="policy_col_2" value="{!dtl.Posting_Date__c}" headerValue="Posting Date" >
+                        </apex:column>    
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:repeat>
+        </apex:pageblock> 
+</apex:page>

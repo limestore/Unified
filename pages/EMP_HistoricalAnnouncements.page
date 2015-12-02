@@ -1,0 +1,41 @@
+<apex:page showHeader="true" sidebar="false" controller="EMP_AssociatePortalHomeController">
+    
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.10.2.min.js')}" />
+    
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_Portal_Content_css)}"/>
+    
+    <apex:outputPanel rendered="{!showDefault}">
+        <div id="wrapper-body">        
+            <div id="container" align="center">            
+                <div class="section-banner-sub">   
+                    <div style="background-image:url('{!URLFOR($Resource.EMP_hmpage_banner_img)}');" class="section-banner-sub-Home-details"></div>                
+                </div>
+                <div class="section group">  
+                   
+                    <div id="sub-nav-container" class="portal">
+                        <c:EMP_Submenu />
+                    </div>
+                    
+                    <div id="content">
+                        <div class="portal assoc-portal col span_combine_3col">
+                            <h1>{!IF ( CONTAINS($CurrentPage.parameters.tagName,'Company Announcement'), 'Company Announcements', 'Organization Announcements') }</h1>        
+                            <c:EMP_CompanyAnnouncements contentTagName="{!$CurrentPage.parameters.tagName}" numberOfColumns="2" showAllRecords="true"/>
+                        </div> 
+                    </div>
+                </div>  
+                <div class="section group">                
+                </div>
+            </div>
+        </div>
+    </apex:outputPanel>    
+    <apex:outputPanel rendered="{!showReadAll}">
+        <div id="content">  
+            <div class="portal assoc-portal col span_nobkg span_1_of_3_nobkg">
+                <h1>Leadership Corner</h1>        
+                <div class="home-content-details">
+                    <c:EMP_ReadAllBlog />
+                </div>
+            </div>     
+        </div>
+    </apex:outputPanel>  
+</apex:page>

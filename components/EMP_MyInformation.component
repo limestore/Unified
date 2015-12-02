@@ -1,0 +1,20 @@
+<apex:component controller="EMP_MyInformationController">
+    
+    <apex:repeat value="{!infoSource}" var="i"> 
+        <table class="table_myinfo">
+            <apex:repeat value="{!i.contacts__r}" var="infor">
+                <tr><td><b>First Name</b> </td><td>: {!infor.FirstName}</td> </tr>
+                <tr><td><b>Last Name</b> </td><td>: {!infor.LastName}</td> </tr> 
+                <tr><td><b>Vendor ID</b> </td><td>: <c:ALL_MaskText NumCharToMask="5" TextValue="{!infor.Vendor_ID__c}&nbsp;" HelpText="Click to Reveal"></c:ALL_MaskText></td> </tr>               
+                <tr><td><b>Email </b> </td><td>: {!infor.Email}</td> </tr> 
+                <tr><td><b>Title</b> </td><td>: {!infor.HR_Title__c}</td> </tr> 
+                <tr><td><b>Manager </b> </td><td>: {!infor.HR_Manager__r.Name}</td> </tr> 
+                <tr><td><b>Location </b> </td><td>: {!infor.HR_Location__c}</td> </tr> 
+                <tr><td><b>Business Unit</b> </td><td>: {!infor.HR_Business_Unit__c}</td> </tr> 
+      
+            </apex:repeat>
+        </table>
+        <br />
+    </apex:repeat>
+
+</apex:component>

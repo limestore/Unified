@@ -1,0 +1,39 @@
+<apex:component controller="EMP_Immigration_Controller">
+    <div class="policyContainer">     
+        <span class="immigration_header">
+            Immigration Services at CDK
+             <br/>
+        </span>
+        <span class="portal immigration_content">
+            The Immigration Team at CDK manages the coordination between the candidate/associate, business leaders and our outside counsel. Fragomen to ensure a successful Immigration porcess
+            for our associates. Below you will find information to assist you in learning more about Immigration, your role in the process, or even follow up on your open case with the USCIS.
+            <br/><br/>
+            In addition to the links above, the <a href="http://{!$Setup.EMP_Immigration_Settings__c.Immigration_Home_Page__c}" target="_blank">Fragomen Immigration Homepage</a> provides insightful information on the Immigration process. Here you can find current news, Immigration resources,
+            a glossary of terms, and the processing times.
+            <br/><br/>
+            <span class="immigration_contentHighlight">Recruiters and HRPBPs:</span> To initiate the immigration process, you must first complete the 
+            <a href="/Employees/servlet/servlet.FileDownload?file={!$Setup.EMP_Immigration_Settings__c.Abstract_Form_Id__c}">Immigration Abstract Form.</a> Once complete, please return to
+            <a href="mailto:{!$Setup.EMP_Immigration_Settings__c.Email__c}" target="_blank">{!$Setup.EMP_Immigration_Settings__c.Employee_Name__c}</a> in Hoffman Estates.
+            <br/><br/>
+        </span>
+        <span class="immigration_table_header">
+            Active Notice of Filings
+        </span>
+        <apex:pageblock > 
+            <apex:repeat value="{!content}" var="policyContent">
+                <apex:outputLabel value="{!policyContent.geographic}" styleClass="policy_subheader"></apex:outputLabel>                
+                <apex:pageBlockSection columns="1"> 
+                    <apex:pageblocktable styleClass="style " value="{!policyContent.contentData}"  var="dtl">
+                        <apex:column styleClass="policy_col_1" headerValue="Current Notifications"  >
+                            <apex:outputLink target="_blank" onclick="" styleClass="policy_link" value="/apex/ContentPreview?contentId={!dtl.Id}">
+                                {!dtl.Title}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column styleClass="policy_col_2" value="{!dtl.Posting_Date__c}" headerValue="Posting Date" >
+                        </apex:column>    
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:repeat>
+        </apex:pageblock> 
+    </div>
+</apex:component>

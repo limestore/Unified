@@ -1,0 +1,30 @@
+<apex:component >
+    <h1>{!$Label.EMP_HumanResource_Focal_header}</h1>
+    <p>
+        <apex:outputtext value="{!$Label.EMP_HumanResource_Foc}" escape="false"/>
+        <apex:outputtext value="{!$Label.EMP_HumanResource_FocalPoint_bottom}" escape="false"/>
+
+    </p>
+    <p>
+        <apex:outputtext value="{!$Label.EMP_HumanResourceContent_Header}" escape="false"/>  
+    </p>
+    <table>
+        <tr>
+            <td>
+                <apex:image url="{!$Resource.EMP_GiveLife}" style="width: 145px"/>	
+            </td>
+            <td>
+                <apex:outputtext value="{!$Label.EMP_HumanResourceContent}" escape="false"/> 
+            </td>	
+        </tr>
+    </table>
+    <br/>
+    
+    <h1>{!$Label.EMP_HR_Left_Header}</h1>   
+    <br/>                         
+    <p>
+        <apex:outputtext value="{!$Label.EMP_HR_Help_Me_content}" escape="false">
+        </apex:outputtext>
+    </p>
+    
+</apex:component>

@@ -1,0 +1,27 @@
+<!--debugged "Read All Leaders Blog" link by Lalitha Adduru 23rd february 2015-->
+<apex:component controller="EMP_LeadershipCornerController">
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.10.2.min.js')}" />
+    
+    <ul> 
+     <!--   <hr align="left" width="95%"/> --> 
+         <apex:repeat value="{!contentSource}" var="news">
+            <li class="leadership_li">
+                <apex:image value="{!news.userUrl}" styleClass="leadership_image"/>
+                <apex:outputLink rendered="{!IF(news.content.Document_Type__c != 'Video',true,false)}" target="_blank" onclick="" value="/apex/ContentPreview?contentId={!news.content.Id}">{!news.content.Title}</apex:outputLink>
+                <apex:outputLink rendered="{!IF(news.content.Document_Type__c == 'Video',true,false)}" target="_blank" onclick="" value="{!news.content.Video_File_Location__c}">{!news.content.Title}</apex:outputLink>
+                <br / >
+                <apex:outputText value="{!news.userFullName}" />
+                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}" styleClass="leadership_date">
+                    <apex:param value="{!news.content.Publish_Date__c}" /> 
+                </apex:outputText>                  
+            </li>
+        <!--    <hr align="left" width="95%" />-->
+        </apex:repeat>
+      
+        <li style="float:left; width:100%;text-align: right;padding-top:3px;">
+            <apex:outputLink rendered="{!IF(showRealAllLink,true,false)}" target="_top" onclick="" value="/apex/EMP_AssociatePortalHome?sfdc.tabName=01re00000000VeS&page=ReadllBlog" styleClass="leadership_ReadAll" style="font-style: italic;">Show More</apex:outputLink>
+        </li>
+    </ul>
+       
+   
+</apex:component>

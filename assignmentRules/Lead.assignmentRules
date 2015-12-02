@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>CB_SVC_Assign_Lead_to_DSM</fullName>
+        <active>false</active>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Web Leads to Sales Ops Queue</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>SalesOpsInquiryQueue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.CreatedDate</field>
+                <operation>equals</operation>
+                <value>TODAY</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Status</field>
+                <operation>equals</operation>
+                <value>Open</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

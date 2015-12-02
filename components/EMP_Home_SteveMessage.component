@@ -1,0 +1,37 @@
+<!--
+created by: Rey Austral (cloudsherpas), 2014-09-19
+updated by: Vijay Manimaran : RQ-04088, added line 30- 36, 2/26/2015
+-->
+
+<apex:component controller="EMP_Home_SteveMessageController" layout="block" >
+    <div class="steve_container">
+        <table>
+            <tr>
+                <td>
+                    <apex:image styleclass="biopic" value="{!URLFOR($Resource.EMP_Images, 'EMP_Spin_Steve_Anenen.jpg')}" alt="Steve Anenen"/>
+                </td>
+            </tr>   
+            <tr>
+                <td>
+                    <p>
+                        <apex:outputText value="{!$Label.EMP_Spin_PortalLandingPage_SteveAnenenUpdates_subHeader}" escape="false"/>
+                    </p>
+                </td>
+            </tr>         
+        </table>
+    </div>
+    
+    <p class="steve_content">
+        <apex:outputText value="{!$Label.EMP_Home_Steve_Message_Content}" escape="false"/>
+    </p>
+ <!--   <p>
+        <apex:outputText value="{!$Label.EMP_Home_Steve_Message_Content_Links}" escape="false"/>
+    </p> -->
+	<ul>
+		<apex:repeat value="{!lstContentVersions}" var="cv" id="theRepeat" rendered="{!IF(lstContentVersions != null,true,false)}">
+			<li>
+				<apex:outputLink target="_blank" onclick="" value="/apex/ContentPreview?contentId={!cv.Id}">{!cv.Title}</apex:outputLink>
+			</li>
+		</apex:repeat>
+	</ul> 
+</apex:component>

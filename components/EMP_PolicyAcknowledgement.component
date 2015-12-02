@@ -1,0 +1,58 @@
+<apex:component controller="EMP_PolicyAcknowledgementPageController" allowDML="true"> 
+   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $j = jQuery.noConflict();
+        function enableAcknowledgeLink(elem){
+            var td = $j(elem).parent();
+            var tr = $j(td).parent();
+            
+            var link = $j(tr).find(".accId");
+            var label = $j(tr).find(".accIdLabel");
+            if(typeof link !== 'undefined'){
+                link.removeClass('ack-disabled');
+            }
+            
+            if(typeof label !== 'undefined'){
+                label.addClass('ack-disabled');
+            }
+        }
+    </script>
+    <apex:form id="theForm">
+       
+            <apex:pageMessages ></apex:pageMessages>
+          
+            <div class="portal" align ="justified">
+              <h1>Policy Acknowledgement</h1>
+              <hr align="left" />
+                <apex:pageBlock >
+                    <apex:pageBlockTable value="{!policyList}" var="test" styleClass="acknowledgement_Table" columnClasses="first,sec,third,fourth"> 
+                        
+                        <apex:column headervalue="Policy">
+                            <apex:outputLink target="_blank" onclick="enableAcknowledgeLink(this);" styleClass="acknowledgement_Link" value="/apex/ContentPreview?contentId={!test.Content_Version_ID__c}">
+                                {!test.Name}
+                            </apex:outputLink>
+                        </apex:column>            
+                        
+                        <apex:column headerValue="Publish Date">
+                            <apex:outputField value="{!test.Policy_Addition_Date__c}">
+                            </apex:outputField>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Acknowledgement">
+                            <center>
+                                <div class="acknowledgement_Field">
+                                    <apex:outputField value="{!test.Date_of_Acknowledgement__c}" rendered="{!test.Acknowledgement_Status__c}" />
+                                </div>
+                                <apex:outputLabel id="acknoledgeLinkLable" style="color:gray;text-decoration:underline"  styleClass="accIdLabel" rendered="{!IF(AND(test.Acknowledgement_Status__c == false),true,false)}">Acknowledge</apex:outputLabel>
+                                <apex:commandlink styleClass="ack-disabled accId acknowledgement_disabled" action="{!acknowledge}"  oncomplete="jasvascript:location.reload(true);"  value="Acknowledge" id="acknowledgeLink" rendered="{!IF(AND(test.Acknowledgement_Status__c == false),true,false)}" >
+                                    <apex:param value="{!test.Id}" name="policyID " assignTo="{!policyID}"/>
+                                </apex:commandlink>
+                            </center>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </div>
+        
+    </apex:form>
+</apex:component>

@@ -1,0 +1,29 @@
+<apex:component controller="EMP_ITSupport_Communication_Controller">
+  <!--  <apex:dataList var="dtl" value="{!content}" id="list" styleClass="itSupport_ul">
+        <apex:outputLink target="_blank"  value="/apex/ContentPreview?contentId={!dtl.contentId}">
+            {!dtl.Title}
+        </apex:outputLink>  
+        <i>, posted on&nbsp;
+            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}" >
+                <apex:param value="{!dtl.Order}" /> 
+            </apex:outputText>   </i>        
+    </apex:dataList> -->
+    <table>
+          <apex:repeat var="dtl" value="{!content}" id="list">
+              <tr><td style="padding:0">   <apex:outputLink target="_blank"  value="/apex/ContentPreview?contentId={!dtl.contentId}">
+            {!dtl.Title}
+        </apex:outputLink> </td></tr>
+      
+       <!-- <i>, posted on&nbsp;
+            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}" >
+                <apex:param value="{!dtl.Order}" /> 
+            </apex:outputText>   </i>  -->   
+    </apex:repeat>
+    </table>
+  
+    <apex:outputPanel rendered="{!showAll}">
+        <div class="dvShowMore">
+            <a href="{!communityUrl+'/apex/EMP_ITSupportCommunication_All'}" target="_blank">Show more</a>  
+        </div>
+    </apex:outputPanel>
+</apex:component>

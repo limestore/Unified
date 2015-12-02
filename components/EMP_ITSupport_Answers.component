@@ -1,0 +1,7 @@
+<apex:component controller="EMP_ITSupport_Answers_Controller">
+    <!--<chatteranswers:searchask communityId="{!answerId}"/> 
+    <chatteranswers:feedfilter />               
+    <chatteranswers:feeds communityId="{!answerId}"/>-->
+                    <hr align="left" />
+                    <chatter:feed entityId="{!$Setup.CustomSettings__c.IT_Support_Chatter__c}" showPublisher="true" />
+</apex:component>

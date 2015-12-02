@@ -1,0 +1,22 @@
+<apex:page controller="ALL_AngularInputFields_Controller" >
+    
+    <apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'css/bootstrap.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.FontAwesome, '4.3.0/css/font-awesome.css')}"/>    
+    <apex:stylesheet value="{!URLFOR($Resource.ALL_AngularInputFields_CSS)}" />
+               
+    <apex:includeScript value="{!URLFOR($Resource.angularJS, 'angularJS/angular.min.js')}"/>    	       
+    <apex:includeScript value="{!URLFOR($Resource.angularJS, 'angularJS/angular-animate.min.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.angularJS, 'angularJS/angular-touch.min.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.angularJS, 'angularJS/ui-bootstrap-tpls.min.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.ALL_AngularInputFields_JS)}" />
+        
+    <script>
+    var __sessionId = '{!$Api.Session_ID}';        
+    </script>    
+    
+   <div ng-app="inputFields">
+        
+        <input type="lookup" ng-Object="Account" ng-columnNames="Id,Name" ng-displayName="Name" ng-model="selected"/>
+        
+    </div> 
+</apex:page>

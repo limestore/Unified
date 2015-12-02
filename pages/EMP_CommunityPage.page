@@ -1,0 +1,26 @@
+<!-- 
+ /*------------------------------------------------------------
+Author: Vijay manimaran
+Company: CDK Global
+Description: My Communities based on chatter Group
+History
+11/11/2015    Vijay.manimaran@cdk.com     Created
+
+------------------------------------------------------------*/
+-->
+<apex:page showHeader="false" sidebar="false" standardstylesheets="false" controller="EMP_MyCommunities_Controller">
+    <apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'css/bootstrap.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'js/bootstrap.min.js')}"/>  
+    <apex:form >
+        <apex:outputPanel rendered="{!CollaborationGroupMembers.size > 0}">
+            <h2>My Community Groups</h2>
+        </apex:outputPanel>
+        <apex:repeat value="{!CollaborationGroupMembers}" var="Groups"> 
+            <ul>
+                <li>
+                    <apex:outputLink value="/{!Groups.CollaborationGroupId}">{!Groups.CollaborationGroup.Name}</apex:outputLink>
+                </li>
+            </ul>
+        </apex:repeat>
+    </apex:form>
+</apex:page>

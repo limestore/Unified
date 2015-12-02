@@ -1,0 +1,16 @@
+<apex:page controller="EMP_ITCommunicationAll_Controller">
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_Portal_Content_css)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_ITSupportCommunity_css)}"/>
+    <div style="min-height:300px">
+        <apex:dataList var="dtl" value="{!content}" id="list" styleClass="itSupport_ul it_link ">
+            <apex:outputLink target="_blank"  value="/apex/ContentPreview?contentId={!dtl.contentId}">
+                {!dtl.Title}
+            </apex:outputLink>  
+            <i>, posted on&nbsp;
+                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}" >
+                    <apex:param value="{!dtl.Order}" /> 
+                </apex:outputText>   </i>            
+        </apex:dataList>
+    </div>
+    
+</apex:page>

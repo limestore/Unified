@@ -1,0 +1,192 @@
+<apex:page controller="DS_SalesPlanManagement" >
+
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.6.2.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-ui-1.8.16.custom.min.js')}"/>
+    
+    <!-- jQuery CSS Options: redmond, cupertino, smoothness, black-tie, ui-lightness, humanity, blitzer, excite-bike -->
+    <apex:stylesheet value="{!URLFOR($Resource.jQuery, 'css/redmond/jquery-ui-1.8.16.custom.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryDataTables, 'media/css/demo_table_jui.css')}"/>
+    
+    <!-- Visualforce page resources -->
+    <apex:includeScript value="{!URLFOR($Resource.DS_SalesPlanManagement_JS)}" />
+    <apex:stylesheet value="{!URLFOR($Resource.DS_SalesPlanManagement_CSS)}" />
+    
+    <apex:sectionHeader title="QC, PC, NNC, and RC Assignment Administrative Tool" subtitle="Sales Plan Management"/>
+    
+    <apex:form id="SalesPlanManagement">
+		
+    	<apex:pageblock mode="edit" title="Defaults & Options">
+    	
+    		<apex:pageblocksection columns="2">
+				
+				<apex:pageblocksectionitem >
+		            <apex:outputlabel id="SelectYearLabel" for="SelectYear" value="Select QC and PC Year:" ></apex:outputlabel>
+		            <apex:outputpanel >
+			            <select id="SelectYear"></select>
+		            </apex:outputpanel>
+				</apex:pageblocksectionitem>
+				
+        		<apex:pageblocksectionitem >
+		            <apex:outputlabel id="DefaultNNCLabel" for="DefaultNNC" value="Default NNC:"></apex:outputlabel>
+		            <apex:outputpanel >
+		            	<input type="text" id="DefaultNNC" value="" />
+		            	<input type="button" class="btn" id="ApplyDefaultNNC" value="Apply"  title="Apply to Selected Users"></input>
+	            	</apex:outputpanel>
+            	</apex:pageblocksectionitem>
+				
+				<apex:pageblocksectionitem >
+		            <apex:outputlabel id="SeasonalRateLabel" for="SeasonalRate" value="Seasonal Rate:"></apex:outputlabel>
+		            <apex:outputpanel >
+			            <select id="SeasonalRate">
+			            	<apex:repeat value="{!AllSeasonalRates}" var="Rate" >
+			            		<option value="{!Rate.Id}" >{!Rate.Name}</option>
+			            	</apex:repeat>
+			            </select>
+			            <input type="button" class="btn" value="View" id="ViewSeasonalRate" />
+			            <input type="button" class="btn" value="Add" id="AddSeasonalRate" />
+		            </apex:outputpanel>
+            	</apex:pageblocksectionitem>
+            	
+        		<apex:pageblocksectionitem >
+		            <apex:outputlabel id="DefaultRCLabel" for="DefaultRC" value="Default RC:"></apex:outputlabel>
+		            <apex:outputpanel >
+		            	<input type="text" id="DefaultRC" value="" />
+		            	<input type="button" class="btn" id="ApplyDefaultRC" value="Apply"  title="Apply to Selected Users"></input>
+	            	</apex:outputpanel>
+            	</apex:pageblocksectionitem>
+            	
+            	<apex:pageblocksectionitem ></apex:pageblocksectionitem>
+            	
+        		<apex:pageblocksectionitem >
+		            <apex:outputlabel id="DefaultQCLabel" for="DefaultQC" value="Default Total QC:"></apex:outputlabel>
+		            <apex:outputpanel >
+		            	<input type="text" id="DefaultQC" value="" />
+		            	<input type="button" class="btn" id="ApplyDefaultQC" value="Apply" title="Apply to Selected Users"></input>
+	            	</apex:outputpanel>
+            	</apex:pageblocksectionitem>
+            	
+            	<apex:pageblocksectionitem ></apex:pageblocksectionitem>
+            	
+        		<apex:pageblocksectionitem >
+		            <apex:outputlabel id="DefaultPCNumberLabel" for="DefaultPCNumber" value="Default PC Number:"></apex:outputlabel>
+		            <apex:outputpanel >
+		            	<input type="text" id="DefaultPCNumber" value="" />
+		            	<input type="button" class="btn" id="ApplyDefaultPCNumber" value="Apply"  title="Apply to Selected Users"></input>
+	            	</apex:outputpanel>
+            	</apex:pageblocksectionitem>
+            	
+            </apex:pageblocksection>
+            
+    	</apex:pageblock>
+   		<apex:pageblock title="Users">
+    	
+    		<div style="overflow:auto; padding-bottom:10px;">
+    			
+    			<div id="UserSelectionOptionsContainer" >
+					<div id="UserSelectionOptions" style="display:none;">
+						<ul>
+							<li><a href="#UserByTitle">Title</a></li>
+							<li><a href="#UserByForecastingChannel">Forecasting Channel</a></li>
+							<li><a href="#UserByLookup">Lookup</a></li>
+							<li><a href="#UserByManagerLookup">Manager Lookup</a></li>
+							<li><a href="#InactiveUserByLookup">Inactive User Lookup</a></li>
+						</ul>
+						<div id="UserByTitle">
+							<apex:pageblocksection columns="1" >
+								<apex:pageblocksectionitem >
+									<apex:outputlabel id="UserTitlesLabel" for="UserTitles" value="Title:"></apex:outputlabel>
+									<apex:outputpanel >
+										<select id="UserTitles" >
+											<apex:repeat value="{!AllUserTitles}" var="Title" >
+												<option value="{!Title}" >{!Title}</option>
+											</apex:repeat>
+										</select>
+										<input type="button" class="btn" value="Select Matching Users" id="AddUsersByTitle" />
+									</apex:outputpanel>
+								</apex:pageblocksectionitem>
+							</apex:pageblocksection>
+						</div>
+						<div id="UserByForecastingChannel">
+							<apex:pageblocksection columns="1" >
+								<apex:pageblocksectionitem >
+									<apex:outputlabel id="UserForecastingChannelsLabel" for="UserForecastingChannels" value="Forecasting Channel:"></apex:outputlabel>
+									<apex:outputpanel >
+										<select id="UserForecastingChannels" >
+											<apex:repeat value="{!AllUserForecastingChannels}" var="ForecastingChannel" >
+												<option value="{!ForecastingChannel}" >{!ForecastingChannel}</option>
+											</apex:repeat>
+										</select>
+										<input type="button" class="btn" value="Select Matching Users" id="AddUsersByForecastingChannel" />
+									</apex:outputpanel>
+								</apex:pageblocksectionitem>
+							</apex:pageblocksection>
+						</div>
+						<div id="UserByLookup">
+							<apex:pageblocksection columns="1" >
+								<apex:pageblocksectionitem >
+									<apex:outputlabel id="UserLookupLabel" for="UserLookup" value="User Lookup:"></apex:outputlabel>
+									<apex:outputpanel >
+										<select id="ActiveUserNames" >
+											<apex:repeat value="{!AllActiveForecastingUsers}" var="CurrentUser" >
+												<option value="{!CurrentUser.Id}" >{!CurrentUser.LastName}, {!CurrentUser.FirstName} ({!CurrentUser.Title})</option>
+											</apex:repeat>
+										</select>
+										<input type="button" class="btn" value="Select User" id="AddActiveUserById" /><br/>
+									</apex:outputpanel>
+								</apex:pageblocksectionitem>
+							</apex:pageblocksection>
+						</div>
+						<div id="UserByManagerLookup">
+							<apex:pageblocksection columns="1" >
+								<apex:pageblocksectionitem >
+									<apex:outputlabel id="UserManagerLookupLabel" for="UserManagerLookup" value="Managed Users Lookup:"></apex:outputlabel>
+									<apex:outputpanel >
+										<select id="UserManagerNames" >
+											<apex:repeat value="{!AllUserManagers}" var="CurrentManagerUser" >
+												<option value="{!CurrentManagerUser.Id}" >{!CurrentManagerUser.LastName}, {!CurrentManagerUser.FirstName} ({!CurrentManagerUser.Title})</option>
+											</apex:repeat>
+										</select>
+										<input type="button" class="btn" value="Select Users Managed" id="AddUsersByManagerId" /><br/>
+									</apex:outputpanel>
+								</apex:pageblocksectionitem>
+							</apex:pageblocksection>
+						</div>
+						<div id="InactiveUserByLookup">
+							<apex:pageblocksection columns="1" >
+								<apex:pageblocksectionitem >
+									<apex:outputlabel id="InactiveUserLookupLabel" for="InactiveUserLookup" value="Inactive User Lookup:"></apex:outputlabel>
+									<apex:outputpanel >
+										<select id="InactiveUserNames" >
+											<apex:repeat value="{!AllInactiveForecastingUsers}" var="InactiveCurrentUser" >
+												<option value="{!InactiveCurrentUser.Id}" >{!InactiveCurrentUser.LastName}, {!InactiveCurrentUser.FirstName} ({!InactiveCurrentUser.Title})</option>
+											</apex:repeat>
+										</select>
+										<input type="button" class="btn" value="Select User" id="AddInactiveUserById" /><br/>
+									</apex:outputpanel>
+								</apex:pageblocksectionitem>
+							</apex:pageblocksection>
+						</div>
+					</div>
+				</div>
+				
+				<div id="AssignButtons" style="display:none; text-align:right; vertical-align:middle;" class="fg-toolbar ui-toolbar ui-widget-header ui-corner-tl ui-corner-tr ui-helper-clearfix">
+					<span id="AssignButtonsLabel" class="AssignButtonLabel">Selected Employees (Users)</span>
+					<button id="AssignNNC" class="AssignButton AssignButtonFirst" title="Assign Net New Credit to Selected Users">Assign NNC</button>
+					<button id="AssignRC" class="AssignButton" title="Assign Renewal Credit to Selected Users">Assign RC</button>
+					<button id="AssignQC" class="AssignButton" title="Assign Quota Credit and Presidents Club Number to Selected Users">Assign QC and PC</button>
+				</div>
+				
+				<div id="SelectedUsersContainer">
+					<table id="SelectedUsersTable" style=""><thead></thead><tbody></tbody></table>
+				</div>
+				
+			</div>
+			
+    	</apex:pageblock>
+    	
+    </apex:form>
+
+	<div style="display:none;">
+		<img id="blue-bar-loading" src="{!URLFOR($Resource.blue_bar_loading_icon)}" />
+	</div>
+</apex:page>

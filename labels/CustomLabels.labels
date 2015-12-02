@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Cancellation_Queue_OwnerId</fullName>
+        <categories>select Id, Name from Group where type = &apos;Queue&apos; and name like &apos;Canc%&apos;</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancellation Queue OwnerId</shortDescription>
+        <value>00G40000001L7db</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Data_Queue_RowId</fullName>
+        <categories>Group Object, Customer Data Queue, 00G40000001L7dl</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Data Queue RowId</shortDescription>
+        <value>00G40000001L7dl</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Form_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Form Name</shortDescription>
+        <value>HR Forms</value>
+    </labels>
+    <labels>
+        <fullName>EMP_HR_Help_Me_content</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP HR Help Me content</shortDescription>
+        <value>Our associates are the most valuable asset of CDK Global.  As we evolve as an HR Organization and look to establish ourselves as a global HR organization we will be able to provide you an expanded list of direct access to exciting tools and make important connections for you through this page.  Check back for continued updates.
+&lt;br/&gt;&lt;br/&gt;
+US Associates: Contact the CDK HR Service Center for self-service, payroll, benefits, or time entry questions and issues.
+&lt;br/&gt;&lt;br/&gt;
+United States: CDK HR Service Center&lt;br/&gt;
+Toll-free: 877-213-6231&lt;br/&gt;
+Fax: 925-598-9016
+&lt;br/&gt;&lt;br/&gt;
+Hours of Operation: Monday - Friday, except holidays, 8:00 am - 6:00 pm Central Time
+&lt;br/&gt;&lt;br/&gt;
+Canadian Associates:  Contact the CDK HR Service Centre for payroll, benefits or time entry questions and issues by sending an e-mail to &lt;a href=&quot;mailto:CDK.HR.Payroll.Operations@cdk.com&quot;&gt;CDK.HR.Payroll.Operations@cdk.com&lt;/a&gt;
+&lt;br&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_HR_Left_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_HR_Left_Header</shortDescription>
+        <value>Help me HR</value>
+    </labels>
+    <labels>
+        <fullName>EMP_HR_Right_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_HR_Right_Header</shortDescription>
+        <value>Quick Links</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Home_Left_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Home_Left_Header</shortDescription>
+        <value>Leadership Corner</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Home_Middle_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Home_Middle_Header</shortDescription>
+        <value>CEO Messages</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Home_Right_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Home_Right_Header</shortDescription>
+        <value>Company Announcements</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Home_Steve_Message_Content</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Home Steve Message Content</shortDescription>
+        <value>Hi Everyone! Please take a moment to read the latest recap.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_HumanResourceContent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_HumanResourceContent</shortDescription>
+        <value>&lt;p&gt;This new program gives you access to thousands of charity options, both locally and nationally, and allows you to double your individual contributions to those organizations that mean the most to you. To review the program guidelines and/or download the matching gift form, please use the &quot;Policies&quot; link within the Quick Link menu on the right hand side of the screen. 
+Questions? Please contact &lt;a href=&quot;mailto: CDK.Philanthropic.Inquiries@cdk.com&quot;&gt; CDK.Philanthropic.Inquiries@cdk.com. &lt;/a&gt;&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_HumanResourceContent_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_HumanResourceContent_Header</shortDescription>
+        <value>&lt;p&gt;&lt;h1 style=&quot;font-size: 20px;&quot;&gt;Matching Gift Program &lt;/h1&gt;&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_HumanResource_Foc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_HumanResource_FocalPoint</shortDescription>
+        <value>&lt;p&gt; North American Associates…it’s time for Focal Point Review! 
+ This is an opportunity for you and your Manager to reflect on accomplishments,
+ feedback and progress you’ve made against your individual goals.&lt;/p&gt;
+&lt;p&gt;The new system is now live and ready for you to begin the process. 
+ &lt;a href=&quot;https://www.logon.ds.adp.com/adfs/ls/IDPInitiatedSignon.aspx?LoginToRP=https://www.successfactors.eu&quot; target=&quot;_blank&quot;&gt;Click here&lt;/a&gt; 
+ to log in and then start entering your goals and completing the 
+ Associate Self-Assessment and Ratings information. &lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_HumanResource_FocalPoint_bottom</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_HumanResource_FocalPoint_bottom</shortDescription>
+        <value>&lt;p&gt;Several resources have been created to help you complete the process 
+-- an &lt;a href=&quot;https://mycdk.force.com/Employees/ContentPreview?contentId=06833000001uMAhAAM&quot; target=&quot;_blank&quot;&gt;Assessment Quick Start guide&lt;/a&gt; and a &lt;a href=&quot;https://mycdk.force.com/Employees/ContentPreview?contentId=06833000001uMAXAA2&quot; target=&quot;_blank&quot;&gt;Home Page Quick Start guide.&lt;/a&gt; 
+ If you have any questions, please reach out to your HR Business Partner.&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_HumanResource_Focal_header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_HumanResource_Focal_header</shortDescription>
+        <value>Focal Point Review</value>
+    </labels>
+    <labels>
+        <fullName>EMP_ITDocLib</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_ITDocLib</shortDescription>
+        <value>IT Document Library</value>
+    </labels>
+    <labels>
+        <fullName>EMP_ITDocLibURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_ITDocLibURL</shortDescription>
+        <value>window.open(&apos;http://adpdsportal.ds.ad.adp.com/DivITSelfService/Documentation/Forms/Category%20View.aspx&apos;,&apos;_blank&apos;);</value>
+    </labels>
+    <labels>
+        <fullName>EMP_ITSupport_Call</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP ITSupport Call</shortDescription>
+        <value>&lt;b&gt;Phone Support &lt;/b&gt; &lt;br /&gt;
+Want to speak with us via the phone?  Call us at 866-995-4700.  If you leave a voice mail, you will still retain your place in line.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_ITSupport_Chat</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP ITSupport Chat</shortDescription>
+        <value>&lt;b&gt;Chat with Us&lt;/b&gt; &lt;br /&gt;
+Just like your bank or cable provider, you can chat online with an agent.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_ITSupport_Community</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP ITSupport Community</shortDescription>
+        <value>&lt;b&gt;Support Answers&lt;/b&gt; &lt;br /&gt;
+Close this window and look at our Q&amp;A social interface page.  Don’t see an answer to your question, then post a question and an agent will answer it for you.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_ITSupport_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP ITSupport Email</shortDescription>
+        <value>&lt;b&gt;Open a Case &lt;/b&gt; &lt;br /&gt;
+Prefer to email us your request?  Click here and just enter in a description of your issue.  Please enter a phone if you are not at your desk where an agent can reach you.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_ITSupport_News</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_ITSupport_News</shortDescription>
+        <value>&lt;br /&gt;
+        &lt;br /&gt;
+&lt;center&gt;
+            &lt;h1&gt;
+                Future News
+            &lt;/h1&gt;
+        &lt;/center&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_ITSupport_WebEx</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_ITSupport_WebEx</shortDescription>
+        <value>Cisco WebEx Replacing LiveMeeting and Global Crossing for all Audtio/Video Conferencing!
+&lt;ul&gt;
+&lt;li&gt;The meeting will Call YOU, no dial-in or passcodes (do not use Global Crossing anymore!)&lt;/li&gt;
+&lt;li&gt;Share anything on your screen&lt;/li&gt;
+&lt;li&gt;Face to face collaboration with HD Video&lt;/li&gt;
+&lt;li&gt;Save on travel - collaborate without ever leaving your office&lt;/li&gt;
+&lt;li&gt;Attend meetings from your Mobile Device (Available for iOS, Android and Windows Phone 8)&lt;/li&gt;
+&lt;li&gt;Meet instantly with a single click&lt;/li&gt;
+&lt;li&gt;Record your meetings to share later&lt;/li&gt;
+&lt;ul&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Immigration_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Immigration Name</shortDescription>
+        <value>Immigration Postings</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Library_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Library_Name</shortDescription>
+        <value>Associate Community Content</value>
+    </labels>
+    <labels>
+        <fullName>EMP_MyInformation_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_MyInformation_Header</shortDescription>
+        <value>My Information</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Policy_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Policy_Name</shortDescription>
+        <value>Policy</value>
+    </labels>
+    <labels>
+        <fullName>EMP_SOC_1st_Section</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP SOC 1st Section</shortDescription>
+        <value>Welcome to the new SOC landing page. We hope you find it user friendly. If you have
+any feedback, please send it to &lt;a href=&quot;mailto: Katie.Shellabarger@cdk.com&quot;&gt;Katie.Shellabarger@cdk.com&lt;/a&gt;. &lt;br /&gt;&lt;br /&gt;
+“ClickWrap” reports replace the “redacted reports” that were previously provided to
+prospects, clients in implementation, and clients who were not processing in the
+production environment during the report coverage period. &lt;br /&gt; &lt;br /&gt;
+There were no restrictions
+over the distribution of ClickWrap reports; they can be freely distributed. Anyone who
+receives a ClickWrap report will be presented with a legal disclaimer that the recipient
+must read and click “Accept” to reflect their acceptance.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_SOC_2nd_Section</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP SOC 2nd Section</shortDescription>
+        <value>Upon clicking “Accept” they
+will be presented with the entire, unredacted SOC report. 
+&lt;br /&gt;&lt;br /&gt;
+If they do not click “Accept”,
+they will not be able to open the report. Prospects, clients in Implementation and clients
+who moved to the Production environment after the end of the report coverage period
+can ONLY be provided ClickWrap versions of SOC reports. Since the ClickWrap version is
+intended to protect both CDK and our service provider, no exceptions will be made to
+this policy.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_SOC_ClickWrap</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP SOC ClickWrap</shortDescription>
+        <value>Regulations and company policy requires that ClickWrap reports be provided to anyone who was not using the product in the production environment(not implementation) during the report coverage period as defined on the cover of the report. ClickWrap Reports are unrestricted use reports and can be provided to any requestor/prospect; an NDA is not necessary.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_SPin_PortalLandingPage_QuickLinks_DealerServicesPortal_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage QuickLinks DealerServicesPortal Sub - Header</shortDescription>
+        <value>&lt;a href=&quot; http://adpdsportal.ds.ad.adp.com&quot; target=&quot;_blank&quot;&gt;&gt; Dealer Services Portal&lt;/a&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_SPin_PortalLandingPage_QuickLinks_FAQs_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP SPin PortalLandingPage QuickLinks FAQs Sub - Header</shortDescription>
+        <value>FAQs</value>
+    </labels>
+    <labels>
+        <fullName>EMP_SPin_PortalLandingPage_QuickLinks_Letters_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_SPin_PortalLandingPage_QuickLinks_Letters_Sub_Header</shortDescription>
+        <value>LETTERS</value>
+    </labels>
+    <labels>
+        <fullName>EMP_SPin_PortalLandingPage_QuickLinks_Miscellaneous_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP SPin PortalLandingPage QuickLinks Miscellaneous Sub - Header</shortDescription>
+        <value>MISCELLANEOUS</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_AboutDealerServices_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage AboutDealerServices Header</shortDescription>
+        <value>Welcome to the CDK Global Spinoff Page</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_AboutDealer_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage AboutDealer Sub-Heade</shortDescription>
+        <value>&lt;b&gt;This page contains all CDK Global Spinoff information and documents.&lt;/b&gt;
+&lt;br/&gt;
+&lt;br/&gt; 
+On April 10, we announced that ADP’s Board of Directors had approved a plan to spin off the Dealer Services business into a standalone, independent and publicly traded company. The Dealer Services business is strong, with good long-term growth prospects, and as an independent entity, will be well positioned to build on its solid client base. 
+&lt;br/&gt; 
+&lt;br/&gt; 
+There are many teams working through the details of the spinoff. Please visit this site often for updates on the progress with this transaction.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_ChatterEntity_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage ChatterEntity ID</shortDescription>
+        <value>0F940000000PGkN</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_CountdownTimer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage CountdownTimer</shortDescription>
+        <value>2014/10/01 00:00:00</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_PageHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage PageHeader</shortDescription>
+        <value>Dealer Services Portal</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_Questions_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage Questions Header</shortDescription>
+        <value>We are Listening</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_Questions_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage Questions Sub-Header</shortDescription>
+        <value>&lt;b&gt;Still have questions?&lt;/b&gt; 
+&lt;br/&gt; 
+&lt;br/&gt; 
+Please send any questions to: 
+&lt;a href=&quot;mailto:internal.communication@cdk.com&quot;&gt;internal.communication@cdk.com&lt;/a&gt;. We are committed to providing our associates with the most up-to-date information about the spinoff as possible. We collect question asked and once we have an answer, we include it in the FAQs for all associates to see.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_QuickLinks_Scripts_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage QuickLinks Scripts Sub-Header</shortDescription>
+        <value>SCRIPTS</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_QuickLinks_Videos_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage QuickLinks Videos Sub-Header</shortDescription>
+        <value>VIDEOS</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_Quick_Links_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage Quick Links Header</shortDescription>
+        <value>Spinoff Communications</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_SpinOffNews_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage SpinOffNews Header</shortDescription>
+        <value>Spinoff News</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_SpinoffNews_Sub_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage SpinoffNews_Sub_Header</shortDescription>
+        <value>The Dealer Services spinoff team will provide an update on the new Dealer Services standalone business activity each month, as well as highlight new or updated questions in the Frequently Asked Question documents.</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_SpinoffNews_Sub_Header_Timer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Spin_PortalLandingPage_SpinoffNews_Sub_Header_Timer</shortDescription>
+        <value>Spinoff Countdown</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_SteveAnenenUpdates_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Spin PortalLandingPage SteveAnenenUpdates</shortDescription>
+        <value>Recent Updates</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Spin_PortalLandingPage_SteveAnenenUpdates_subHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Spin_PortalLandingPage_SteveAnenenUpdates_subHeader</shortDescription>
+        <value>&lt;b&gt;Steve Anenen&lt;/b&gt;&lt;br/&gt;
+CEO, CDK Global</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Training_Choice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Training_Choice</shortDescription>
+        <value>&lt;p&gt;&lt;ul class=&quot;career_ul&quot;&gt;&lt;li&gt;If you know your Learning Connect UserID and password, &lt;a href=&quot;https://adp.kenexa.com/pe/register/include/processlogin.jsp?uri=%2Fpe%2F&quot; target=&quot;_blank&quot;&gt;click here&lt;/a&gt; for English and &lt;a href=&quot;https://adp.kenexa.com/pe/register/include/processlogin.jsp?channelID=10106339&quot; target=&quot;_blank&quot;&gt;click here&lt;/a&gt; for French.&lt;/li&gt; 
+&lt;li&gt;If you’ve forgotten either your Learning Connect UserID or password, log on to Learning Connect and select “Forgot your login name?” or “Forgot your password?”.&lt;/li&gt;&lt;li&gt;If you don’t have a Learning Connect account, or have questions about your account, contact a CDK Global Training Coordinator at DS.Training@cdk.com&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Training_Learning</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP Training Learning</shortDescription>
+        <value>&lt;p&gt;Learning Connect  &lt;br/&gt;
+Learning Connect houses all of our internal learning modules. Whether you’re a new Associate looking to learn more about a solution, or looking to refresh your current knowledge and skills, we encourage you to take a look. New content is being added all the time.&lt;p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Training_RightPanel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Training_RightPanel</shortDescription>
+        <value>&lt;div&gt; 
+&lt;p&gt; 
+&lt;b&gt;Our Mission:&lt;/b&gt;&lt;br/&gt; 
+Power our Client and Associate success through high-impact learning.&lt;br/&gt;&lt;br/&gt; 
+
+&lt;b&gt;Vision:&lt;/b&gt;&lt;br/&gt; 
+Be an essential business partner that develops and delivers transformative learning solutions which directly impact positive business results.&lt;br/&gt;&lt;br/&gt; 
+
+&lt;b&gt;Strategy:&lt;/b&gt;&lt;br/&gt; 
+
+&lt;ul class=&quot;career_ul&quot; style=&quot;margin-left:30px&quot;&gt; 
+&lt;li&gt;Deliver workflow-based learning, with a focus on client outcomes and best practices.&lt;/li&gt; 
+&lt;li&gt;Leverage leading-edge technology to provide simple, accessible and innovative learning.&lt;/li&gt; 
+&lt;li&gt;Elevate the performance of our Associates with role-based learning that enhances professional skills and knowledge.&lt;/li&gt; 
+&lt;/ul&gt; 
+
+&lt;/p&gt; 
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Training_Welcome</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Training_Welcome</shortDescription>
+        <value>&lt;div class=&quot;portal&quot;&gt; 
+&lt;p&gt;
+Welcome to the CDK Global Learning &amp; Performance community! The success of CDK Global will be based on the insight and knowledge we provide both our Clients and Associates. The driving force of CDK Global’s Learning &amp; Performance team will be based on creating transformative learning that provides competitive advantages to CDK Global and our clients, enabling strategic growth opportunities for all of us. &lt;/br&gt; &lt;/br&gt; 
+
+The Learning &amp; Performance Team is uniquely structured by the audiences we serve, the workflow solutions we design, the audiences we deliver curriculum for, and the technology and support of our learning platforms. 
+&lt;/br&gt;&lt;/br&gt; 
+The Learning &amp; Performance team will be aligned into 3 Core Teams; Learning Delivery, Learning Design &amp; Development and Learning Strategy &amp; Technology Solutions. 
+&lt;/br&gt;&lt;/br&gt; 
+For more information about the teams, or the services we provide, please see the links to the right.&lt;br/&gt; 
+&lt;/p&gt;
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Training_learningContent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Training_learningContent</shortDescription>
+        <value>&amp;nbspIf you are a business or product leader who needs to request new learning courses be designed and developed, please</value>
+    </labels>
+    <labels>
+        <fullName>EMP_Training_learningHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMP_Training_learningHeader</shortDescription>
+        <value>&lt;p&gt;&lt;b&gt;New Learning Development &lt;/b&gt;&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>IFS_Domains_Queue_RowId</fullName>
+        <categories>Group Object, IFS Domains Queue, 00G40000001L7g6</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IFS Domains Queue RowId</shortDescription>
+        <value>00G40000001L7g6</value>
+    </labels>
+    <labels>
+        <fullName>Service_Ops_Transitions_Queue_RowId</fullName>
+        <categories>Group Object, Service Ops Transition Queue, 00G40000001L7ef</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Service Ops Transitions Queue RowId</shortDescription>
+        <value>00G40000001L7ef</value>
+    </labels>
+    <labels>
+        <fullName>Tier_1_Queue_RowId</fullName>
+        <categories>Group Object, Tier 1 Queue, 00G40000001L7fm</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tier 1 Queue RowId</shortDescription>
+        <value>00G40000001L7fm</value>
+    </labels>
+    <labels>
+        <fullName>Tier_2_Content_Queue_RowId</fullName>
+        <categories>Group Object, Tier 2 Content Queue, 00G40000001L7fr</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tier 2 Content Queue RowId</shortDescription>
+        <value>00G40000001L7fr</value>
+    </labels>
+    <labels>
+        <fullName>Tier_2_ETS_Queue_RowId</fullName>
+        <categories>Group Object, Tier 2 ETS Queue, 00G40000001L7fw</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tier 2 ETS Queue RowId</shortDescription>
+        <value>00G40000001L7fw</value>
+    </labels>
+    <labels>
+        <fullName>Validation_WebID_users_cannot_edit_webid_User_1</fullName>
+        <categories>Cast Iron UserId, 00540000001GrBh</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validation - WebID - users cannot edit webid User 1</shortDescription>
+        <value>00540000001IOkH</value>
+    </labels>
+    <labels>
+        <fullName>Validation_WebID_users_cannot_edit_webid_User_2</fullName>
+        <categories>Conversion UserId, 00540000001IOc0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validation - WebID - users cannot edit webid User 2</shortDescription>
+        <value>00540000001IOc0</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_1</fullName>
+        <categories>Jennifer Jones, 00540000001IOgO</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 1</shortDescription>
+        <value>00540000001IOgO</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_10</fullName>
+        <categories>Mary O&apos;Driscoll, 00540000001i3pF</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 10</shortDescription>
+        <value>00540000001i3pF</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_2</fullName>
+        <categories>Richard McNish, 00540000001IOdB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 2</shortDescription>
+        <value>00540000001IOdB</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_3</fullName>
+        <categories>Shannon Horton, 00540000001IOj1</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 3</shortDescription>
+        <value>00540000001IOj1</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_4</fullName>
+        <categories>Nikki Battles, 00540000001IOiD</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 4</shortDescription>
+        <value>00540000001IOiD</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_5</fullName>
+        <categories>Megan McManus, 00540000001IOhq</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 5</shortDescription>
+        <value>00540000001IOhq</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_6</fullName>
+        <categories>Joe Stephanson, 00540000001IOgc</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 6</shortDescription>
+        <value>00540000001IOgc</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_7</fullName>
+        <categories>Cara O&apos;Driscollz, 00540000001IOea</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 7</shortDescription>
+        <value>00540000001IOea</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_8</fullName>
+        <categories>Ron Ross, 00540000001IOih</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 8</shortDescription>
+        <value>00540000001IOih</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_Cancellation_Queue_User_9</fullName>
+        <categories>Elizabeth Palmer, 00540000001IOpZ</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign Cancellation Queue User 9</shortDescription>
+        <value>00540000001IOpZ</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_1</fullName>
+        <categories>Cara O&apos;Driscoll, 00540000001IOea</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 1</shortDescription>
+        <value>00540000001IOea</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_10</fullName>
+        <categories>Mary O&apos;Driscoll, 00540000001i3pF</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 10</shortDescription>
+        <value>00540000001i3pF</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_2</fullName>
+        <categories>Jenifer Jones, 00540000001IOgO</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 2</shortDescription>
+        <value>00540000001IOgO</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_3</fullName>
+        <categories>Megan McManus, 00540000001IOhq</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 3</shortDescription>
+        <value>00540000001IOhq</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_4</fullName>
+        <categories>Nikki Battles, 00540000001IOiD</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 4</shortDescription>
+        <value>00540000001IOiD</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_5</fullName>
+        <categories>Joe Stephanson, 00540000001IOgc</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 5</shortDescription>
+        <value>00540000001IOgc</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_6</fullName>
+        <categories>Richard McNish, 00540000001IOdB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 6</shortDescription>
+        <value>00540000001IOdB</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_7</fullName>
+        <categories>Ron Ross, 00540000001IOih</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 7</shortDescription>
+        <value>00540000001IOih</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_8</fullName>
+        <categories>Shannon Horton, 00540000001IOj1</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 8</shortDescription>
+        <value>00540000001IOj1</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Assign_PDC_to_Cancellations_User_9</fullName>
+        <categories>Elizabeth Palmer, 00540000001IOpZ</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Assign - PDC to Cancellations User 9</shortDescription>
+        <value>00540000001IOpZ</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Corp_IT_Cases_Cannot_be_Closed_User_1</fullName>
+        <categories>AJ Soysouvanh, 00540000001IOck</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Corp IT Cases Cannot be Closed User 1</shortDescription>
+        <value>00540000001IOck</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Corp_IT_Cases_Cannot_be_Closed_User_2</fullName>
+        <categories>Cameron Wong, 00540000001GqpH</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Corp IT Cases Cannot be Closed User 2</shortDescription>
+        <value>00540000001GqpH</value>
+    </labels>
+    <labels>
+        <fullName>WorkFlow_Corp_IT_Cases_Cannot_be_Closed_User_3</fullName>
+        <categories>William Thresher, 00540000001IOjl</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkFlow Corp IT Cases Cannot be Closed User 3</shortDescription>
+        <value>00540000001IOjl</value>
+    </labels>
+</CustomLabels>

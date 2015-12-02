@@ -1,0 +1,94 @@
+<!--Modified by Lalitha Adduru on 17 February 2015, added a scroll bar to Leadership corner column-->
+<apex:page showHeader="true" sidebar="false" controller="EMP_AssociatePortalHomeController">
+    
+    
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.10.2.min.js')}" />
+    
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_Portal_Content_css)}"/>
+    
+    <apex:outputPanel rendered="{!showDefault}">
+        <div id="wrapper-body" >        
+            <div id="container" align="center">            
+                <div class="section-banner-sub">   
+                    <div style="background-image:url('{!URLFOR($Resource.EMP_hmpage_banner_img)}');" class="section-banner-sub-Home-details"></div>                
+                </div>
+                <div class="section group">  
+                   
+                    <div id="sub-nav-container" class="portal">
+                        <c:EMP_Submenu />
+                    </div>   
+                    <div id="content">                          
+                        <div class="portal assoc-portal col three_col span_1_of_3" style="background-color:#D8D8D8">
+                            <apex:outputPanel layout="block" style="height:200px" >
+                                <br/>
+                             <h1>{!$Label.EMP_Home_Left_Header}</h1>        
+                            <div class="home-content-details">
+                                <c:EMP_LeadershipCorner />
+                            </div>
+                            </apex:outputPanel>                                
+                        </div>                          
+                        <div class="col span_2_of_3 three_col portal" style="background-color:#D8D8D8">
+                            <br/>
+                            <div  class="portal" ><h1>{!$Label.EMP_Home_Middle_Header}</h1> 
+                            </div> 
+                            <br/>
+                            <c:EMP_Home_SteveMessage />
+                        </div>                    
+                        <div class=" assoc-portal col portal three_col span_3_of_3" style="background-color:#D8D8D8">
+                            <br />
+                            <h1 >{!$Label.EMP_Home_Right_Header}</h1>  
+                            <c:EMP_CompanyAnnouncements contentTagName="Company Announcement" showAllRecords="false" /> 
+                            <br/>                            
+                        </div>                        
+                    </div>
+                    <div class="col span_2_of_3 three_col portal" style="background-color:white">
+                            <div  class="portal" ><h1></h1>  
+                            </div> 
+                            <br/>
+                        </div>
+                    <div id="content">
+                    <div class="portal assoc-portal col three_col span_2_of_3" style="background-color:white">        
+                            <div class="home-content-details">
+                           <!-- <apex:image url="{!$Resource.EMP_CiscoWebexImage}" height="235"/>-->
+                            </div>
+                        </div>                                                                       
+                         <div class="assoc-portal col portal three_col span_3_of_3" style="background-color:#D8D8D8">
+                             <br/>
+                            <h1>Organization Announcements</h1>        
+                            <c:EMP_CompanyAnnouncements contentTagName="Organization Announcement"  showAllRecords="false" />
+                        </div> 
+                    </div>
+                </div>  
+                <div class="section group">                
+                </div>
+            </div>
+        </div>
+    </apex:outputPanel>    
+    
+        <apex:outputPanel rendered="{!showReadAll}">
+                <div id="wrapper-body">        
+            <div id="container" align="center">            
+                <div class="section-banner-sub">   
+                    <div style="background-image:url('{!URLFOR($Resource.EMP_hmpage_banner_img)}');" class="section-banner-sub-Home-details"></div>                
+                </div>
+                <div class="section group">  
+                   
+                    <div id="sub-nav-container" class="portal">
+                        <c:EMP_Submenu />
+                    </div>  
+
+        <div id="content">  
+            <div class="portal assoc-portal col span_3_of_3" >
+                <h1>Leadership Corner</h1>        
+                <div class="home-content-details">
+                    <c:EMP_ReadAllBlog />
+                </div>
+            </div>     
+        </div>
+      </div>
+        </div>     
+      </div>
+   
+    </apex:outputPanel>
+   
+</apex:page>

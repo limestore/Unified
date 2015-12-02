@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>DS_DealerBrandPromise_Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>DS_DealerBrandPromise_Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>DS_DealerBrandPromise</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This creative brief will help you explain and communicate the dealer’s brand promise to Services. Services will use this information to build a website that reflects the dealer’s goals, priorities and brand. The result: improved client satisfaction, reduced re-work time and accelerated site optimization by the Advocate.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Dealer Brand Promises</relationshipLabel>
+        <relationshipName>Dealer_Brand_Promises</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>After_Sale_Benefits_Deli__c</fullName>
+        <externalId>false</externalId>
+        <label>After Sale Benefits - Deli</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>After_Sale_Benefits_Espresso_Bar__c</fullName>
+        <externalId>false</externalId>
+        <label>After Sale Benefits - Espresso Bar</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>After_Sale_Benefits_Loaner_Car__c</fullName>
+        <externalId>false</externalId>
+        <label>After Sale Benefits - Loaner Car</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>After_Sale_Benefits_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>After Sale Benefits - Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>After_Sale_Benefits_Quick_Lube__c</fullName>
+        <externalId>false</externalId>
+        <label>After Sale Benefits - Quick Lube</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>After_Sale_Benefits_VIP_Reward__c</fullName>
+        <externalId>false</externalId>
+        <label>After Sale Benefits - VIP Reward</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>After_Sale_Benefits_Waiting_Area__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What are the after-sale benefits that you offer your customers? Rank in order of importance and add details of each(1 - Most Important, 10 - Least Important):</inlineHelpText>
+        <label>After Sale Benefits - Waiting Area</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CPO_Program__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If used, do you participate in a CPO program?</inlineHelpText>
+        <label>CPO Program</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Union_Programs__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Are you involved in any corporate or credit union buying programs that you would like your site visitors to be aware of (ex: Costco, Microsoft Prime, Boeing Credit Union)</inlineHelpText>
+        <label>Credit Union Programs</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Current_website_Like_Least__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What do you like least about your current website?</inlineHelpText>
+        <label>Current website Like Least</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Current_website_Like_Most__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What do you like most about your current website?</inlineHelpText>
+        <label>Current website Like Most</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Customer_Describe__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How do your customers describe you? For example, if two neighbors in your community are talking and your name come up, what do they say about you?   Is that how you want them to describe you?   If not, how would you like them to describe you?</inlineHelpText>
+        <label>Customer Describe</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DSM_DOS__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Designated_DSM__r.Manager.FirstName + &apos; &apos; +  Account__r.Designated_DSM__r.Manager.LastName</formula>
+        <label>DSM DOS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_websites_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What dealer websites have you seen that you like? (If you need help, log into the Sales Demo Portal and check out the Inspiration Gallery). Rank and list a minimum of 2 URLs:</inlineHelpText>
+        <label>Dealer websites - #1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Dealer_websites_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer websites - #2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Dealer_websites_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer websites - #3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Dealer_websites_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer websites - #4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Dealer_websites_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer websites - #5</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Dealer_websites_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer websites - #6</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Dealership_Tag_Line__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is your dealership&apos;s tag line?</inlineHelpText>
+        <label>Dealership Tag Line</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Different_From_Competitors__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What makes you different from your competitors? (Example: do you have the largest selection of X model in stock? Do you offer special finance?)</inlineHelpText>
+        <label>Different From Competitors</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Home_Page_Message__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When a visitor lands on your home page, what is the most important message you want to convey?(what do you want them to know about you? (For example, best prices? Best customer service? Largest inventory?)</inlineHelpText>
+        <label>Home Page Message</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Home_Page_Second_Message__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What’s the 2nd most important message?</inlineHelpText>
+        <label>Home Page Second Message</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Home_Page_Third_Message__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What&apos;s the 3rd most important message?</inlineHelpText>
+        <label>Home Page Third Message</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Manuf_Incentive_Programs__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Are there manufacturer incentives and programs that you don’t participate in? Which ones and why?</inlineHelpText>
+        <label>Manuf Incentive &amp; Programs</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Models_To_Showcase__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>At present, what models do you want to showcase on your home page?</inlineHelpText>
+        <label>Models To Showcase</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>New_Used_Car_Dealer__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you consider yourself more of a new or used car dealer?</inlineHelpText>
+        <label>New Used Car Dealer</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Used</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>New_Website_Order_Or_Package_Upgrade__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is this a new website order or a package upgrade?</inlineHelpText>
+        <label>New Website Order Or Package Upgrade</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Website Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Package Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Participation_Level_CPO_Program__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe your level of participation in your CPO program.</inlineHelpText>
+        <label>Participation Level CPO Program</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pcnt_CPO__c</fullName>
+        <externalId>false</externalId>
+        <label>Pcnt - CPO</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Pcnt_New__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What’s your inventory split:</inlineHelpText>
+        <label>Pcnt - New</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Pcnt_Used__c</fullName>
+        <externalId>false</externalId>
+        <label>Pcnt - Used</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Perception__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What perception do you want to create when visitors land on your site?
+• classic, timeless and established
+• trend setters/cutting edge/innovative
+• deal oriented and want to make a big splash
+• go out of our way to delight cust. &amp; meet their needs</inlineHelpText>
+        <label>Perception</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pricing_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Help me understand your pricing strategy so we can reflect it when we list inventory prices on your website. We have the ability to list multiple prices and discounts. What are your practices? (ex: show MSRP and internet price or MSRP and sale price ?)</inlineHelpText>
+        <label>Pricing Strategy</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Profit_Center_Body_Shop__c</fullName>
+        <externalId>false</externalId>
+        <label>Profit Center - Body Shop</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Profit_Center_Finance__c</fullName>
+        <externalId>false</externalId>
+        <label>Profit Center - Finance</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Profit_Center_New_Car_Sales__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Rank, in order of priority, the profit centers you would like to be the focus of your website today(1 - Most Important, 10 - Least Important):</inlineHelpText>
+        <label>Profit Center - New Car Sales</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Profit_Center_Parts__c</fullName>
+        <externalId>false</externalId>
+        <label>Profit Center - Parts</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Profit_Center_Priorities__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Do your profit center priorities change often? If so, how?</inlineHelpText>
+        <label>Profit Center Priorities</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Profit_Center_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Profit Center - Service</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Profit_Center_Special_Finance__c</fullName>
+        <externalId>false</externalId>
+        <label>Profit Center - Special Finance</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 -  Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Profit_Center_Used_Car_Sales__c</fullName>
+        <externalId>false</externalId>
+        <label>Profit Center - Used Car Sales</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Most Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Least Important</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recap_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>Recap__r.Name + &apos; - &apos; + Recap__r.Account__r.Name</formula>
+        <label>Recap Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recap__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Recap</label>
+        <referenceTo>Recap__c</referenceTo>
+        <relationshipLabel>Dealer Brand Promises</relationshipLabel>
+        <relationshipName>Dealer_Brand_Promises</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Staff_Photos__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you have photos of your staff that you’d like on your site? Do you want name, email, and phone under each person?  Short bio?</inlineHelpText>
+        <label>Staff Photos</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Top_Three_Reasons__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If you had to guess, what are the top three reasons why shoppers visit your store?</inlineHelpText>
+        <label>Top Three Reasons</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Pcnt_CPO__c +  Pcnt_New__c +  Pcnt_Used__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total(%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>WebID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related WebID</label>
+        <referenceTo>WebID__c</referenceTo>
+        <relationshipLabel>Dealer Brand Promises</relationshipLabel>
+        <relationshipName>Dealer_Brand_Promises</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Website_Change__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Why are you making a website change? (What are the hurts?)</inlineHelpText>
+        <label>Website Change?</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Websites_Listed_Above__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What do you like most about the websites listed above?</inlineHelpText>
+        <label>Websites Listed Above</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>What_Cities__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What cities do you pull customers from? What cities does your advertising and marketing reach? Are there other areas/cities that you want to reach?</inlineHelpText>
+        <label>What Cities</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <label>Dealer Brand Promise</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Recap__c</columns>
+        <columns>Recap_Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>DBP - {00000}</displayFormat>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Dealer Brand Promises</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Recap__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Recap_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Recap__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Recap_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Recap__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>UPDATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>Recap__c</searchFilterFields>
+        <searchFilterFields>Recap_Description__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchFilterFields>CREATEDBY_USER</searchFilterFields>
+        <searchFilterFields>UPDATEDBY_USER</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Pcnt_Must_Be_Hundred</fullName>
+        <active>true</active>
+        <description>Percent cannot be greater than 100 or less than 0</description>
+        <errorConditionFormula>AND (
+  (
+    (
+      BLANKVALUE(Pcnt_CPO__c,0) + 
+      BLANKVALUE(Pcnt_New__c,0) + 
+      BLANKVALUE(Pcnt_Used__c,0)
+    ) &lt;&gt; 0
+  ),
+  (
+    (
+      BLANKVALUE(Pcnt_CPO__c,0) + 
+      BLANKVALUE(Pcnt_New__c,0) + 
+      BLANKVALUE(Pcnt_Used__c,0)
+    ) &lt;&gt; 1
+  )
+)</errorConditionFormula>
+        <errorMessage>Percent cannot be greater than 100 or less than 100</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Dealer_Brand_Promise</fullName>
+        <availability>online</availability>
+        <description>from Recap Related List</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Dealer Brand Promise</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/apex.js&quot;)}
+
+var URL = window.location.href;
+var CurrentID = URL &amp;&amp; URL != null &amp;&amp; URL.indexOf(&quot;/&quot;) &gt; 0 ? URL.split(&quot;/&quot;)[URL.split(&quot;/&quot;).length-1].replace(/[#?&amp;]+.*$/g,&quot;&quot;) : &quot;&quot;;
+
+if(CurrentID != &quot;&quot;)
+{
+    var records = sforce.connection.query(
+        &quot;Select Id, Name, Account__c, Account__r.Name From Recap__c Where Id = \&apos;&quot; + CurrentID+ &quot;\&apos;&quot;);
+
+    var record = records.getArray(&quot;records&quot;)[0];
+
+    window.location = &quot;/apex/DS_DealerBrandPromise_Edit?rid=&quot; + CurrentID + &quot;&amp;rname=&quot; + record.Name + &quot;&amp;aname=&quot; + record.Account__r.Name + &quot;&amp;aid=&quot; + record.Account__c + &quot;&amp;retURL=/&quot; + CurrentID;
+}</url>
+    </webLinks>
+</CustomObject>

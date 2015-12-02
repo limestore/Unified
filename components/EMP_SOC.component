@@ -1,0 +1,98 @@
+<apex:component controller="EMP_SOC_Controller">
+   <apex:stylesheet value="{!URLFOR($Resource.EMP_SOC_css)}"/>
+    <div class="content">
+        <div class="span_combine_2Multi col" >     
+            <div class="span_combine_2colMulti_Content col" >
+                <div class="portal">
+                    <h1>SOC 1 Reports (Formerly known as SAS70 Reports)</h1>                              
+                    <br/>
+                    <p>
+                        <apex:outputText value="{!$Label.EMP_SOC_1st_Section}" escape="false" /> <apex:outputText value="{!$Label.EMP_SOC_2nd_Section}" escape="false" /> 
+                    </p>
+                    
+                    <br/>        
+                </div>
+            </div>  
+            <apex:repeat value="{!lstContent}" var="content">  
+                <div class="span_combine_2colMulti_Content col" >
+                    <div class="portal" >
+                        <h1>{!content.applicability}</h1>                              
+                        <br/>
+                        <div class="{!IF(content.image!='','divWithImage','')}" style="display:table">
+                            <div class="image_div divAlign {!IF(content.image='','hideComponent','')}" >
+                                <apex:image title="{!content.applicability}" url="{!content.image}" width="50" height="50"  />
+                            </div>
+                            <div class="divAlign">
+                                <apex:repeat value="{!content.reportSubCategoryWrapper}" var="formContent">
+                                    <div  >
+                                        <div class="content">
+                                            <div>
+                                                <apex:outputLabel value="{!formContent.subCategory}" styleClass="policy_subheader"></apex:outputLabel>
+                                            </div>
+                                            <ul>
+                                                <apex:repeat value="{!formContent.content}"  var="dtl">
+                                                    <li>
+                                                        <apex:outputLink target="_blank" onclick=""  value="/apex/ContentPreview?contentId={!dtl.contentId}">
+                                                            {!dtl.Title}
+                                                        </apex:outputLink>
+                                                    </li>
+                                                </apex:repeat>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </apex:repeat>
+                            </div>
+                            
+                        </div>
+                        <p  class="{!IF(content.applicability='ClickWrap','','hideComponent')}">
+                            <apex:outputText value="{!$Label.EMP_SOC_ClickWrap}" escape="false" />
+                        </p>
+                       <!-- <p  class="{!IF(content.description='','hideComponent','')}">
+                            <apex:outputLabel value="{!content.description}"></apex:outputLabel>
+                        </p> -->
+                    </div>
+                </div>   
+            </apex:repeat>
+        </div>
+        
+        <div class="assoc-portal col span_3_of_3_MultiRow" >   
+            <div class="span_3_of_3_MultiRow_Content portal">  
+                <h1>Contact</h1>
+                <apex:repeat value="{!contactInformation}" var="con">
+                    <ul >     
+                        <li class="contact_details"><a href="mailto:{!con.Email__c}">{!con.Name}</a></li>
+                        <li class="contact_details">{!con.Position__c}</li>
+                        <li class="contact_details">{!con.Department__c}</li>
+                        <li class="contact_details">{!con.Contact_No__c}</li>
+                        <li class="contact_details"><a href="mailto:{!con.Email__c}">{!con.Email__c}</a></li>
+                    </ul>
+                </apex:repeat>
+            </div>
+            <apex:repeat value="{!lstExternalSite}" var="content">      
+                <div class= "span_3_of_3_MultiRow_Content portal">  
+                    <h1>{!content.applicability}</h1>
+                    
+                    <apex:repeat value="{!content.reportSubCategoryWrapper}" var="formContent">
+                        <div>                           
+                            <div class="content">
+                                <div>
+                                    <apex:outputLabel value="{!formContent.subCategory}" styleClass="policy_subheader"></apex:outputLabel>
+                                </div>
+                                
+                                <ul>
+                                    <apex:repeat value="{!formContent.content}"  var="dtl">
+                                        <li>
+                                            <apex:outputLink target="_blank" onclick="" styleClass="policy_link" value="/apex/ContentPreview?contentId={!dtl.contentId}">
+                                                {!dtl.Title}
+                                            </apex:outputLink>                                           
+                                        </li>
+                                    </apex:repeat> 
+                                </ul>                       
+                            </div>
+                        </div>
+                    </apex:repeat>
+                </div>
+            </apex:repeat>
+        </div>      
+    </div>
+</apex:component>

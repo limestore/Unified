@@ -1,0 +1,36 @@
+<apex:component controller="EMP_Chatter_Controller" allowDML="true" >
+    
+    <apex:attribute name="ChatterGroupId" description="The ID of the Chatter Group." type="String" required="true" assignTo="{!ChatterGroupIdvalue}"/>
+    
+    <apex:form id="ChatterForm" styleclass="form-inline">
+        <div>
+            <a name="ChatterAnchor" id="ChatterAnchor"></a>
+            <h2>Join the Conversation!</h2>
+            
+            <div class="form-group width-80-percent">
+                <apex:inputText value="{!AddAFeedPost}" id="statusUpdate" styleclass="form-control input-width-100-percent" />    
+            </div>
+            &nbsp;
+            <apex:commandButton value="Share" action="{!AddPost}" styleClass="btn btn-success" />
+            &nbsp;
+            <apex:outputText value="{!ErrorMessage}" styleClass="red-text" />
+        </div>
+        
+        <apex:repeat value="{!lstCollGrp}" var="f" >
+            <div class="media">
+                <div class="media-left">
+                    <apex:image value="{!f.strUserPhoto}" width="60" height="60"/>
+                </div> 
+                <div class="media-body">
+                    <apex:outputLink value="/_ui/core/userprofile/UserProfilePage?u={!f.objGrpFeed.CreatedByID}" target="_blank" styleclass="media-heading">{!f.objGrpFeed.CreatedBy.Name}</apex:outputLink>
+                    <br/>
+                    <apex:outputText value="{!f.objGrpFeed.Body}" style="font:Oblique;" /><br/>
+                    <apex:outputField value="{!f.objGrpFeed.createddate}"/><br/>
+                </div>
+            </div>
+        </apex:repeat>
+        <br/>
+        <apex:commandbutton value="Show More »" action="{!ShowMore}" styleclass="btn btn-default"/>
+    </apex:form>
+    
+</apex:component>

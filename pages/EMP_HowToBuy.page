@@ -1,0 +1,55 @@
+<apex:page showHeader="true" sidebar="false" controller="EMP_HowToBuyController" >    
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_Portal_Content_css)}"/>
+    <!--<apex:stylesheet value="{!URLFOR($Resource.EMP_ITSupportCommunity_css)}"/> -->
+    <div id="wrapper-body">        
+        <div id="container" align="center" style="min-height:700px;">            
+            <div id="content" >
+                <div class="span_combine_2col col fix_chatter" >
+                    <apex:pageBlock title="Procurement Community feed" >  
+                        <apex:outputPanel style="overflow:auto; "> 
+                            <div class="content_answer" >
+                                <c:EMP_ITSupportChatter />  
+                            </div>
+                        </apex:outputPanel>
+                    </apex:pageBlock> 
+                </div>
+                <div class=" col span_3_of_3_MultiRow" >   
+                    <div class="span_3_of_3_MultiRow_Content">
+                        <div style="text-align:center">
+                            <table align="center">
+                                <th><img src="{!URLFOR($Resource.EMP_HowtoBuyImages,'HowtoBuyImages/CDK-Buttons-Portal-Buy.gif')}" onclick="window.open('http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/default.aspx');" style="width:200px;height:200px;cursor:pointer;"/></th>         
+                                <tr align="center" >-
+                                    <td width="90px"> <apex:outputLink value="http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/default.aspx" target="_blank">How To Buy</apex:outputLink></td>
+                                </tr>
+                            </table>
+                            <table align="center" >
+                                <tr>
+                                    <th><img src="{!URLFOR($Resource.EMP_HowtoBuyImages,'HowtoBuyImages/CDK-Buttons-Portal-ContractsGroup.gif')}" onclick="window.open('http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/CDKProcProdProcs1/WhenToContactTheContractsGroup.pdf');" style="width:90px;height:90px;cursor:pointer;"/></th>
+                                    <th><img src="{!URLFOR($Resource.EMP_HowtoBuyImages,'HowtoBuyImages/CDK-Buttons-Portal-Ariba.gif')}" onclick="window.open('http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/CDKProcProdProcs1/Ariba.pdf');" style="width:90px;height:90px;cursor:pointer;"/></th>
+                                    <th><img src="{!URLFOR($Resource.EMP_HowtoBuyImages,'HowtoBuyImages/CDK-Buttons-Portal-FAQ.gif')}" onclick="window.open('http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/Lists/HowToBuyFAQ/AllItems.aspx');" style="width:90px;height:90px;cursor:pointer;"/></th><br/>
+                                </tr>
+                                <tr align="center" >
+                                    <td width="90px"> <apex:outputLink value="http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/CDKProcProdProcs1/WhenToContactTheContractsGroup.pdf" target="_blank">When to Contact The Contracts Group</apex:outputLink></td>
+                                    <td width="90px"> <apex:outputLink value="http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/CDKProcProdProcs1/Ariba.pdf" target="_blank">Request Purchase Order</apex:outputLink></td>
+                                    <td width="90px"> <apex:outputLink value="http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/Lists/HowToBuyFAQ/AllItems.aspx" target="_blank">Frequently Asked Questions</apex:outputLink></td>
+                                </tr>
+                                
+                            </table><br/><br/>
+                            <table align="center">
+                                <tr>
+                                    <th><img src="{!URLFOR($Resource.EMP_HowtoBuyImages,'HowtoBuyImages/CDK-Buttons-Portal-Travel.gif')}" onclick="window.open('http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/CDKProcProdProcs1/TravelEventExpense.pdf');" style="width:90px;height:90px;cursor:pointer;"/></th>
+                                    <th><img src="{!URLFOR($Resource.EMP_HowtoBuyImages,'HowtoBuyImages/CDK-Buttons-Portal-Wireless.gif')}" onclick="window.open('http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/CDKProcProdProcs1/WirelessTechnology.pdf');" style="width:90px;height:90px;cursor:pointer;"/></th>
+                                </tr>   
+                                <tr align="center" >
+                                    <td width="90px"> <apex:outputLink value="http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/CDKProcProdProcs1/TravelEventExpense.pdf" target="_blank">Travel, Event And Expense</apex:outputLink></td>
+                                    <td width="90px"> <apex:outputLink value="http://adpdscfo.ds.ad.adp.com/sites/CIO/supplychain/CDKProcProd/CDKProcProdProcs1/WirelessTechnology.pdf" target="_blank">Wireless Technology</apex:outputLink></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>                     
+            </div>            
+        </div>
+    </div>
+    
+</apex:page>

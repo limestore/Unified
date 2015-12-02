@@ -1,0 +1,48 @@
+<apex:page showHeader="true" sidebar="false" controller="EMP_TrainingComponentController">
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_Portal_Content_css)}"/>
+    <div id="wrapper-body">        
+        <div id="container" align="center">            
+            <div class="section-banner-sub">   
+                <div style="background-image:url('{!URLFOR($Resource.EMP_Training_Banner_Img)}');" class="section-banner-sub-details"></div>                  
+            </div>
+            
+            <div class="section group">
+                <div id="sub-nav-container" class="portal">
+                    <c:EMP_Submenu />
+                </div>                
+                <div id="content">
+                    <apex:outputPanel >
+                        <div class="span_combine_2col col" >     
+                            <div class="span_combine_2col_Content col" style="width:160%">
+                                <div class="portal">
+                                    <c:EMP_TrainingComponent />
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="assoc-portal col span_3_of_3_MultiRow" >   
+                            <div class="span_3_of_3_MultiRow_Content portal" style="min-height:526px">  
+                                <br/>
+                                <ul id="choose" class="tool-list">
+                                    <apex:repeat value="{!lstContentVersions}" var="TR" >
+                                        <li>
+                                            <apex:outputLink styleClass="sidebarlist" target="_blank" onclick="" value="/apex/ContentPreview?contentId={!TR.Id}">{!TR.Title}</apex:outputLink>
+                                        </li>
+                                        <!-- rendered="{!if(strTitle =='LP Course Request Form',true,false)}"-->
+                                    </apex:repeat>  
+                                </ul>    
+                                <p><apex:outputtext value="{!$Label.EMP_Training_RightPanel}" escape="false"></apex:outputtext></p>
+                                
+                            </div>
+                            
+                        </div>                    
+                    </apex:outputPanel>
+                    
+                    
+                    
+                    
+                </div>            
+            </div>
+        </div>
+    </div>
+    
+</apex:page>

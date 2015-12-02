@@ -1,0 +1,385 @@
+<apex:page standardController="Dealer_Brand_Promise__c" showHeader="false" sidebar="false" standardStylesheets="false">
+    
+    <apex:includeScript value="{!URLFOR($Resource.DS_SortTable)}" />
+    
+    <style>
+        body
+        {
+            font-family: "Garamond", serif;
+        }
+        
+        .instructions
+        {
+            font-size:1.2em;
+        }
+        
+        .question 
+        {
+            font-weight: bold;
+            margin-bottom: 4px;
+            margin-top: 10px;
+        }
+        
+        .subquestion 
+        {
+            font-style: italic;
+        }
+        
+        .answer
+        {
+            line-height: 2em;
+            min-height: 1.5em;
+        }
+    </style>
+    
+    <h1>Dealer Brand Promise</h1>
+    <h2>{!Dealer_Brand_Promise__c.Name}</h2>
+    
+    <hr/>
+    
+    <div>
+        <h3>Instructions</h3>
+        <p>This creative brief will help you explain and communicate the dealer’s brand promise to Services. 
+        Services will use this information to build a website that reflects the dealer’s goals, priorities and brand. 
+        The result: improved client satisfaction, reduced re-work time and accelerated site optimization by the Advocate. </p>
+    </div>
+    
+    <div>
+        <h3>Information</h3>
+        <div>
+            <label>{!$ObjectType.Dealer_Brand_Promise__c.fields.Name.Label}:</label>&nbsp;<span>{!Dealer_Brand_Promise__c.Name}</span><br/>
+            <label>{!$ObjectType.Dealer_Brand_Promise__c.fields.Account__c.Label}:</label>&nbsp;<span>{!Dealer_Brand_Promise__c.Account__r.Name}</span><br/>
+            <label>{!$ObjectType.Dealer_Brand_Promise__c.fields.Recap__c.Label}:</label>&nbsp;<span>{!Dealer_Brand_Promise__c.Recap__r.Name}</span><br/>
+            <label>{!$ObjectType.Dealer_Brand_Promise__c.fields.Recap_Description__c.Label}:</label>&nbsp;<span>{!Dealer_Brand_Promise__c.Recap_Description__c}</span><br/>
+        </div>
+    </div>
+    
+    <div>
+        <h3>Questions</h3>
+        <div>
+<div>
+  <apex:variable var="New_Website_Order_Or_Package_Upgrade__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.New_Website_Order_Or_Package_Upgrade__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.New_Website_Order_Or_Package_Upgrade__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.New_Website_Order_Or_Package_Upgrade__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(New_Website_Order_Or_Package_Upgrade__c_label,'-'),RIGHT(New_Website_Order_Or_Package_Upgrade__c_label,LEN(New_Website_Order_Or_Package_Upgrade__c_label)-FIND('-',New_Website_Order_Or_Package_Upgrade__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.New_Website_Order_Or_Package_Upgrade__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Home_Page_Message__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Home_Page_Message__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Home_Page_Message__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Home_Page_Message__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Home_Page_Message__c_label,'-'),RIGHT(Home_Page_Message__c_label,LEN(Home_Page_Message__c_label)-FIND('-',Home_Page_Message__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Home_Page_Message__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Home_Page_Second_Message__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Home_Page_Second_Message__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Home_Page_Second_Message__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Home_Page_Second_Message__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Home_Page_Second_Message__c_label,'-'),RIGHT(Home_Page_Second_Message__c_label,LEN(Home_Page_Second_Message__c_label)-FIND('-',Home_Page_Second_Message__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Home_Page_Second_Message__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Home_Page_Third_Message__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Home_Page_Third_Message__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Home_Page_Third_Message__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Home_Page_Third_Message__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Home_Page_Third_Message__c_label,'-'),RIGHT(Home_Page_Third_Message__c_label,LEN(Home_Page_Third_Message__c_label)-FIND('-',Home_Page_Third_Message__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Home_Page_Third_Message__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Different_From_Competitors__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Different_From_Competitors__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Different_From_Competitors__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Different_From_Competitors__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Different_From_Competitors__c_label,'-'),RIGHT(Different_From_Competitors__c_label,LEN(Different_From_Competitors__c_label)-FIND('-',Different_From_Competitors__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Different_From_Competitors__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Customer_Describe__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Customer_Describe__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Customer_Describe__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Customer_Describe__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Customer_Describe__c_label,'-'),RIGHT(Customer_Describe__c_label,LEN(Customer_Describe__c_label)-FIND('-',Customer_Describe__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Customer_Describe__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Top_Three_Reasons__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Top_Three_Reasons__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Top_Three_Reasons__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Top_Three_Reasons__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Top_Three_Reasons__c_label,'-'),RIGHT(Top_Three_Reasons__c_label,LEN(Top_Three_Reasons__c_label)-FIND('-',Top_Three_Reasons__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Top_Three_Reasons__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Dealership_Tag_Line__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Dealership_Tag_Line__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Dealership_Tag_Line__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Dealership_Tag_Line__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Dealership_Tag_Line__c_label,'-'),RIGHT(Dealership_Tag_Line__c_label,LEN(Dealership_Tag_Line__c_label)-FIND('-',Dealership_Tag_Line__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Dealership_Tag_Line__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Profit_Center_New_Car_Sales__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Profit_Center_New_Car_Sales__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_New_Car_Sales__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_New_Car_Sales__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Profit_Center_New_Car_Sales__c_label,'-'),RIGHT(Profit_Center_New_Car_Sales__c_label,LEN(Profit_Center_New_Car_Sales__c_label)-FIND('-',Profit_Center_New_Car_Sales__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Profit_Center_New_Car_Sales__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Profit_Center_Used_Car_Sales__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Profit_Center_Used_Car_Sales__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Used_Car_Sales__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Used_Car_Sales__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Profit_Center_Used_Car_Sales__c_label,'-'),RIGHT(Profit_Center_Used_Car_Sales__c_label,LEN(Profit_Center_Used_Car_Sales__c_label)-FIND('-',Profit_Center_Used_Car_Sales__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Profit_Center_Used_Car_Sales__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Profit_Center_Finance__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Profit_Center_Finance__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Finance__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Finance__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Profit_Center_Finance__c_label,'-'),RIGHT(Profit_Center_Finance__c_label,LEN(Profit_Center_Finance__c_label)-FIND('-',Profit_Center_Finance__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Profit_Center_Finance__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Profit_Center_Special_Finance__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Profit_Center_Special_Finance__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Special_Finance__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Special_Finance__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Profit_Center_Special_Finance__c_label,'-'),RIGHT(Profit_Center_Special_Finance__c_label,LEN(Profit_Center_Special_Finance__c_label)-FIND('-',Profit_Center_Special_Finance__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Profit_Center_Special_Finance__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Profit_Center_Service__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Profit_Center_Service__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Service__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Service__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Profit_Center_Service__c_label,'-'),RIGHT(Profit_Center_Service__c_label,LEN(Profit_Center_Service__c_label)-FIND('-',Profit_Center_Service__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Profit_Center_Service__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Profit_Center_Parts__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Profit_Center_Parts__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Parts__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Parts__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Profit_Center_Parts__c_label,'-'),RIGHT(Profit_Center_Parts__c_label,LEN(Profit_Center_Parts__c_label)-FIND('-',Profit_Center_Parts__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Profit_Center_Parts__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Profit_Center_Body_Shop__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Profit_Center_Body_Shop__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Body_Shop__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Body_Shop__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Profit_Center_Body_Shop__c_label,'-'),RIGHT(Profit_Center_Body_Shop__c_label,LEN(Profit_Center_Body_Shop__c_label)-FIND('-',Profit_Center_Body_Shop__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Profit_Center_Body_Shop__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Profit_Center_Priorities__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Profit_Center_Priorities__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Priorities__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Profit_Center_Priorities__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Profit_Center_Priorities__c_label,'-'),RIGHT(Profit_Center_Priorities__c_label,LEN(Profit_Center_Priorities__c_label)-FIND('-',Profit_Center_Priorities__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Profit_Center_Priorities__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Models_To_Showcase__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Models_To_Showcase__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Models_To_Showcase__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Models_To_Showcase__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Models_To_Showcase__c_label,'-'),RIGHT(Models_To_Showcase__c_label,LEN(Models_To_Showcase__c_label)-FIND('-',Models_To_Showcase__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Models_To_Showcase__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Pricing_Strategy__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Pricing_Strategy__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Pricing_Strategy__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Pricing_Strategy__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Pricing_Strategy__c_label,'-'),RIGHT(Pricing_Strategy__c_label,LEN(Pricing_Strategy__c_label)-FIND('-',Pricing_Strategy__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Pricing_Strategy__c}</div>
+</div>
+
+<div>
+  <apex:variable var="New_Used_Car_Dealer__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.New_Used_Car_Dealer__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.New_Used_Car_Dealer__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.New_Used_Car_Dealer__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(New_Used_Car_Dealer__c_label,'-'),RIGHT(New_Used_Car_Dealer__c_label,LEN(New_Used_Car_Dealer__c_label)-FIND('-',New_Used_Car_Dealer__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.New_Used_Car_Dealer__c}</div>
+</div>
+
+<div>
+  <apex:variable var="CPO_Program__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.CPO_Program__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.CPO_Program__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.CPO_Program__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(CPO_Program__c_label,'-'),RIGHT(CPO_Program__c_label,LEN(CPO_Program__c_label)-FIND('-',CPO_Program__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.CPO_Program__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Participation_Level_CPO_Program__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Participation_Level_CPO_Program__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Participation_Level_CPO_Program__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Participation_Level_CPO_Program__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Participation_Level_CPO_Program__c_label,'-'),RIGHT(Participation_Level_CPO_Program__c_label,LEN(Participation_Level_CPO_Program__c_label)-FIND('-',Participation_Level_CPO_Program__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Participation_Level_CPO_Program__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Pcnt_New__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Pcnt_New__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Pcnt_New__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Pcnt_New__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Pcnt_New__c_label,'-'),RIGHT(Pcnt_New__c_label,LEN(Pcnt_New__c_label)-FIND('-',Pcnt_New__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Pcnt_New__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Pcnt_CPO__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Pcnt_CPO__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Pcnt_CPO__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Pcnt_CPO__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Pcnt_CPO__c_label,'-'),RIGHT(Pcnt_CPO__c_label,LEN(Pcnt_CPO__c_label)-FIND('-',Pcnt_CPO__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Pcnt_CPO__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Pcnt_Used__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Pcnt_Used__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Pcnt_Used__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Pcnt_Used__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Pcnt_Used__c_label,'-'),RIGHT(Pcnt_Used__c_label,LEN(Pcnt_Used__c_label)-FIND('-',Pcnt_Used__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Pcnt_Used__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Perception__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Perception__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Perception__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Perception__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Perception__c_label,'-'),RIGHT(Perception__c_label,LEN(Perception__c_label)-FIND('-',Perception__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Perception__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Website_Change__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Website_Change__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Website_Change__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Website_Change__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Website_Change__c_label,'-'),RIGHT(Website_Change__c_label,LEN(Website_Change__c_label)-FIND('-',Website_Change__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Website_Change__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Current_website_Like_Most__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Current_website_Like_Most__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Current_website_Like_Most__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Current_website_Like_Most__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Current_website_Like_Most__c_label,'-'),RIGHT(Current_website_Like_Most__c_label,LEN(Current_website_Like_Most__c_label)-FIND('-',Current_website_Like_Most__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Current_website_Like_Most__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Current_website_Like_Least__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Current_website_Like_Least__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Current_website_Like_Least__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Current_website_Like_Least__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Current_website_Like_Least__c_label,'-'),RIGHT(Current_website_Like_Least__c_label,LEN(Current_website_Like_Least__c_label)-FIND('-',Current_website_Like_Least__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Current_website_Like_Least__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Dealer_websites_1__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Dealer_websites_1__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_1__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_1__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Dealer_websites_1__c_label,'-'),RIGHT(Dealer_websites_1__c_label,LEN(Dealer_websites_1__c_label)-FIND('-',Dealer_websites_1__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Dealer_websites_1__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Dealer_websites_2__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Dealer_websites_2__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_2__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_2__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Dealer_websites_2__c_label,'-'),RIGHT(Dealer_websites_2__c_label,LEN(Dealer_websites_2__c_label)-FIND('-',Dealer_websites_2__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Dealer_websites_2__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Dealer_websites_3__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Dealer_websites_3__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_3__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_3__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Dealer_websites_3__c_label,'-'),RIGHT(Dealer_websites_3__c_label,LEN(Dealer_websites_3__c_label)-FIND('-',Dealer_websites_3__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Dealer_websites_3__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Dealer_websites_4__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Dealer_websites_4__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_4__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_4__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Dealer_websites_4__c_label,'-'),RIGHT(Dealer_websites_4__c_label,LEN(Dealer_websites_4__c_label)-FIND('-',Dealer_websites_4__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Dealer_websites_4__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Dealer_websites_5__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Dealer_websites_5__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_5__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_5__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Dealer_websites_5__c_label,'-'),RIGHT(Dealer_websites_5__c_label,LEN(Dealer_websites_5__c_label)-FIND('-',Dealer_websites_5__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Dealer_websites_5__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Dealer_websites_6__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Dealer_websites_6__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_6__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Dealer_websites_6__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Dealer_websites_6__c_label,'-'),RIGHT(Dealer_websites_6__c_label,LEN(Dealer_websites_6__c_label)-FIND('-',Dealer_websites_6__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Dealer_websites_6__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Websites_Listed_Above__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Websites_Listed_Above__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Websites_Listed_Above__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Websites_Listed_Above__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Websites_Listed_Above__c_label,'-'),RIGHT(Websites_Listed_Above__c_label,LEN(Websites_Listed_Above__c_label)-FIND('-',Websites_Listed_Above__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Websites_Listed_Above__c}</div>
+</div>
+
+<div>
+  <apex:variable var="After_Sale_Benefits_Waiting_Area__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.After_Sale_Benefits_Waiting_Area__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Waiting_Area__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Waiting_Area__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(After_Sale_Benefits_Waiting_Area__c_label,'-'),RIGHT(After_Sale_Benefits_Waiting_Area__c_label,LEN(After_Sale_Benefits_Waiting_Area__c_label)-FIND('-',After_Sale_Benefits_Waiting_Area__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.After_Sale_Benefits_Waiting_Area__c}</div>
+</div>
+
+<div>
+  <apex:variable var="After_Sale_Benefits_Quick_Lube__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.After_Sale_Benefits_Quick_Lube__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Quick_Lube__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Quick_Lube__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(After_Sale_Benefits_Quick_Lube__c_label,'-'),RIGHT(After_Sale_Benefits_Quick_Lube__c_label,LEN(After_Sale_Benefits_Quick_Lube__c_label)-FIND('-',After_Sale_Benefits_Quick_Lube__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.After_Sale_Benefits_Quick_Lube__c}</div>
+</div>
+
+<div>
+  <apex:variable var="After_Sale_Benefits_Loaner_Car__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.After_Sale_Benefits_Loaner_Car__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Loaner_Car__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Loaner_Car__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(After_Sale_Benefits_Loaner_Car__c_label,'-'),RIGHT(After_Sale_Benefits_Loaner_Car__c_label,LEN(After_Sale_Benefits_Loaner_Car__c_label)-FIND('-',After_Sale_Benefits_Loaner_Car__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.After_Sale_Benefits_Loaner_Car__c}</div>
+</div>
+
+<div>
+  <apex:variable var="After_Sale_Benefits_Deli__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.After_Sale_Benefits_Deli__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Deli__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Deli__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(After_Sale_Benefits_Deli__c_label,'-'),RIGHT(After_Sale_Benefits_Deli__c_label,LEN(After_Sale_Benefits_Deli__c_label)-FIND('-',After_Sale_Benefits_Deli__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.After_Sale_Benefits_Deli__c}</div>
+</div>
+
+<div>
+  <apex:variable var="After_Sale_Benefits_Espresso_Bar__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.After_Sale_Benefits_Espresso_Bar__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Espresso_Bar__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Espresso_Bar__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(After_Sale_Benefits_Espresso_Bar__c_label,'-'),RIGHT(After_Sale_Benefits_Espresso_Bar__c_label,LEN(After_Sale_Benefits_Espresso_Bar__c_label)-FIND('-',After_Sale_Benefits_Espresso_Bar__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.After_Sale_Benefits_Espresso_Bar__c}</div>
+</div>
+
+<div>
+  <apex:variable var="After_Sale_Benefits_VIP_Reward__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.After_Sale_Benefits_VIP_Reward__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_VIP_Reward__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_VIP_Reward__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(After_Sale_Benefits_VIP_Reward__c_label,'-'),RIGHT(After_Sale_Benefits_VIP_Reward__c_label,LEN(After_Sale_Benefits_VIP_Reward__c_label)-FIND('-',After_Sale_Benefits_VIP_Reward__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.After_Sale_Benefits_VIP_Reward__c}</div>
+</div>
+
+<div>
+  <apex:variable var="After_Sale_Benefits_Other__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.After_Sale_Benefits_Other__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Other__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.After_Sale_Benefits_Other__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(After_Sale_Benefits_Other__c_label,'-'),RIGHT(After_Sale_Benefits_Other__c_label,LEN(After_Sale_Benefits_Other__c_label)-FIND('-',After_Sale_Benefits_Other__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.After_Sale_Benefits_Other__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Staff_Photos__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Staff_Photos__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Staff_Photos__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Staff_Photos__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Staff_Photos__c_label,'-'),RIGHT(Staff_Photos__c_label,LEN(Staff_Photos__c_label)-FIND('-',Staff_Photos__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Staff_Photos__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Credit_Union_Programs__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Credit_Union_Programs__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Credit_Union_Programs__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Credit_Union_Programs__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Credit_Union_Programs__c_label,'-'),RIGHT(Credit_Union_Programs__c_label,LEN(Credit_Union_Programs__c_label)-FIND('-',Credit_Union_Programs__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Credit_Union_Programs__c}</div>
+</div>
+
+<div>
+  <apex:variable var="Manuf_Incentive_Programs__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.Manuf_Incentive_Programs__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.Manuf_Incentive_Programs__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.Manuf_Incentive_Programs__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(Manuf_Incentive_Programs__c_label,'-'),RIGHT(Manuf_Incentive_Programs__c_label,LEN(Manuf_Incentive_Programs__c_label)-FIND('-',Manuf_Incentive_Programs__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.Manuf_Incentive_Programs__c}</div>
+</div>
+
+<div>
+  <apex:variable var="What_Cities__c_label" value="{!$ObjectType.Dealer_Brand_Promise__c.fields.What_Cities__c.Label}" />
+  <div class="question" style="{!IF(ISBLANK($ObjectType.Dealer_Brand_Promise__c.Fields.What_Cities__c.inlineHelpText),'','border-top:solid 1px #CCC;')}"><apex:outputtext >{!$ObjectType.Dealer_Brand_Promise__c.Fields.What_Cities__c.inlineHelpText}</apex:outputtext></div>
+  <div class="subquestion">{!IF(CONTAINS(What_Cities__c_label,'-'),RIGHT(What_Cities__c_label,LEN(What_Cities__c_label)-FIND('-',What_Cities__c_label)),'')}</div>
+  <div class="answer">{!Dealer_Brand_Promise__c.What_Cities__c}</div>
+</div>
+
+        </div>
+    </div>
+    
+</apex:page>

@@ -1,0 +1,227 @@
+<!--
+/*------------------------------------------------------------
+Author: Rey Austral
+Company: Cloud Sherpas
+Description: IT Support Home Page
+History
+11/25/14    Rey Austral             Created
+3/06/15    Rey Austral             Update Contact Support, Web Ex, Show Future News
+3/20/15    Vijay Manimaran          RQ-04232 
+------------------------------------------------------------*/
+-->
+<apex:page showHeader="true" sidebar="false">
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_Portal_Content_css)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_ITSupportCommunity_css)}"/>
+    
+    <style>
+        .button_section_arrow {
+        background-repeat: no-repeat;
+        background-image:url('{!URLFOR($Resource.EMP_ITSupport_Arrow)}');
+        background-size:  30px 40px;
+        width:30px;
+        height:43px;
+        margin-right:10px;
+        float:right;
+        cursor:pointer;
+        
+        }
+        
+    </style>
+    <div id="wrapper-body">        
+        <div id="container" align="center">            
+            <div class="section-banner-sub">   
+                <div style="background-image:url('{!URLFOR($Resource.EMP_ITSupport_Banner_Img)}');" class="section-banner-sub-details"></div>                
+            </div>
+            <div class="section group">
+                <div id="sub-nav-container" class="portal">
+                    <c:EMP_Submenu />
+                </div>                
+                <div id="content">
+                    <div class="top_section">
+                        <apex:pageBlock title="IT Support Chatter feed" >  
+                            <apex:outputPanel style="overflow:auto;">
+                                <div class="content_answer" >
+                                    <c:EMP_ITSupport_Answers />  
+                                </div>
+                            </apex:outputPanel>
+                        </apex:pageBlock> 
+                    </div>
+                    <div class="mid_section" >
+                        <div class="mid_subSection">
+                            <div class="shadow button_container" onclick="showContact();">
+                                <div class="button_section " >Contact Support  </div> 
+                                <div class="button_section_arrow " ></div>
+                            </div>
+                            <apex:pageBlock title="IT Support Communications" >    
+                                <div class="it_link content_communication" > 
+                                    <c:EMP_ITSupport_Communication ></c:EMP_ITSupport_Communication>
+                                </div>
+                            </apex:pageBlock>
+                        </div>
+                        <div class="mid_subSection">
+                            <div  class="shadow button_container" onclick="showWebEx();">
+                               <!-- <div class="button_section" >Cisco WebEx  </div> 
+                                <div class="button_section_arrow"></div>    -->                            
+                            </div>
+                            <apex:pageBlock title="IT Request / Changes">  
+                                <div class="it_link content_general"> 
+                                    <c:EMP_ITSupport_General />
+                                </div>  
+                            </apex:pageBlock>
+                        </div>
+                        <div class="mid_subSection">
+                        
+                            <div class="shadow button_container" onclick="{!$Label.EMP_ITDocLibURL}">  
+                            <!-- <div class="shadow button_container" onclick="showNews();">  -->
+                                <div class="button_section" >{!$Label.EMP_ITDocLib}</div>                         
+                                <!-- <div class="button_section" >Future News for You </div> -->
+                                <div class="button_section_arrow"></div>
+                            </div>
+                            <apex:pageBlock title="I Need Applications/Upgrades"> 
+                                <div class="it_link content_application">  
+                                    <c:EMP_ITSupport_Application ></c:EMP_ITSupport_Application>
+                                </div>       
+                            </apex:pageBlock>
+                        </div>
+                    </div>
+                    <div class="bottom_section">
+                        <apex:pageBlock title="Submit/Vote on New IT Ideas"> 
+                            <div class="it_link content_ideas">
+                                <c:EMP_ITSupport_Ideas />
+                            </div>
+                        </apex:pageBlock>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div id="dvContact" class="div_contact " title="Contact Support">            
+            <div class="div_container_call" >
+                <div class="contact_button_border contact_label">
+                    <div class="contact_button">
+                        <apex:image value="{!$Resource.EMP_ITSupport_Call}" styleClass="contact_button_img"/>
+                        <div class="contact_button_label_call"> CALL US</div> 
+                    </div>
+                </div> 
+                <div class="contact_description">
+                    <apex:outputText value="{!$Label.EMP_ITSupport_Call}" escape="false" />
+                </div>
+            </div>            
+            <div class="div_container_case">
+                <div class="contact_button_border " onclick="parent.location='mailto:helpmeit@cdk.com'">
+                    <div class="contact_button">
+                        <apex:image value="{!$Resource.EMP_ITSupport_email_img}" styleClass="contact_button_img"/>
+                        <div class="contact_button_label_case">EMAIL US</div> 
+                    </div>
+                </div>                
+                <div class="contact_description">
+                    <apex:outputText value="{!$Label.EMP_ITSupport_Email}" escape="false" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="div_container_chat">
+                <div class= "contact_button_border"   onclick="window.open('https://iitschatsupport.ds.adp.com/','_blank');">
+                    <div class="contact_button">
+                        <apex:image value="{!$Resource.EMP_Live_Chat_Icon}" styleClass="contact_button_img"/>
+                        <div class="contact_button_label_chat"> CHAT</div>
+                    </div>
+                </div>                 
+                <div class="contact_description">
+                    <apex:outputText value="{!$Label.EMP_ITSupport_Chat}" escape="false" />
+                </div>
+            </div>
+            <div class="div_container_ideas">
+                <div class="contact_button_border contact_label">
+                    <div class="contact_button">
+                        <apex:image value="{!$Resource.EMP_ITSupport_Com_img}" styleClass="contact_button_img"/>
+                        <div class="contact_button_label_community">ASK THE COMMUNITY</div>
+                    </div>
+                </div> 
+                
+                <div class="contact_description">
+                    <apex:outputText value="{!$Label.EMP_ITSupport_Community}" escape="false" /> 
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- <div id="dvWebEx" class="div_contact" title="Cisco WebEx">
+        <center> <apex:image value="{!$Resource.EMP_ITSupport_WebEx}"/></center>
+        
+        <div class="webEx_Container">
+            <apex:outputText value="{!$Label.EMP_ITSupport_WebEx}" escape="false" />
+        </div>
+        
+    </div>-->
+    <div id="dvNews" class="div_contact">
+        
+        <apex:outputText value="{!$Label.EMP_ITSupport_News}" escape="false" />
+    </div>
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.7.2.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-ui-1.8.20.custom.min.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.jQuery, 'css/redmond/jquery-ui-1.8.20.custom.css')}" />
+    
+    
+    <script>
+    function showContact() {
+        closeAllDialog();
+        $('#dvContact').dialog({  
+            open: function() {
+                $('.ui-dialog-buttonset').children('button').
+                removeClass("ui-button ui-widget ui-state-default ui-state-active ui-state-focus ui-corner-all").
+                mouseover(function() { $(this).removeClass('ui-state-hover'); }).
+                mousedown(function() { $(this).removeClass('ui-state-active'); }).
+                focus(function() { $(this).removeClass('ui-state-focus'); });
+                $(this).removeClass(".ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button");
+            },
+            width: 770,
+            height: 380,
+            resizable: false,
+            modal:true
+        });
+        
+    }
+    function showWebEx() {
+        closeAllDialog();
+        $('#dvWebEx').dialog({  
+            open: function() {
+                $('.ui-dialog-buttonset').children('button').
+                removeClass("ui-button ui-widget ui-state-default ui-state-active ui-state-focus ui-corner-all").
+                mouseover(function() { $(this).removeClass('ui-state-hover'); }).
+                mousedown(function() { $(this).removeClass('ui-state-active'); }).
+                focus(function() { $(this).removeClass('ui-state-focus'); });
+                $(this).removeClass(".ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button");
+            },
+            width: 470,           
+            resizable: false,
+            modal:true
+            
+            
+        });
+    }
+    
+    function showNews() {
+        closeAllDialog();
+        $('#dvNews').dialog({  
+            open: function() {
+                $('.ui-dialog-buttonset').children('button').
+                removeClass("ui-button ui-widget ui-state-default ui-state-active ui-state-focus ui-corner-all").
+                mouseover(function() { $(this).removeClass('ui-state-hover'); }).
+                mousedown(function() { $(this).removeClass('ui-state-active'); }).
+                focus(function() { $(this).removeClass('ui-state-focus'); });
+                $(this).removeClass(".ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button");
+            },
+            width: 270,           
+            resizable: false,
+            modal:true
+            
+        });
+    }
+    
+    function closeAllDialog() {
+        $('#dvNews').dialog("close");
+        $('#dvWebEx').dialog("close");
+        $('#dvContact').dialog("close");
+    }
+    
+    </script>
+</apex:page>

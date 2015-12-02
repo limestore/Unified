@@ -1,0 +1,9 @@
+<apex:component controller="EMP_ITSupport_General_Controller">
+    <apex:repeat value="{!listGeneralSection}" var="gen">
+        <a href="{!gen.URL__c}" target="_blank">{!gen.Name}</a>
+        <br />
+        <span>
+        {!gen.Description__c}
+        </span>  
+    </apex:repeat>
+</apex:component>

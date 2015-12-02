@@ -1,0 +1,41 @@
+<!--
+created by: Josephine Del Mundo (cloudsherpas), 2014-06-13
+updated by: Matt Keefe, 2014-07-08
+updated by: Rey Austral, 2014-09-19
+updated by: Matt Keefe, 2014-10-10 - added attribute
+updated by: Venkata Shrivol, 2014-12-17 - added link
+-->
+
+<apex:component controller="EMP_CompanyAnnouncementsController" layout="block">       
+    
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.10.2.min.js')}" />
+    
+    <apex:attribute name="contentTagName" description="Announcement Tag Name" type="String" required="false" assignTo="{!ContentTag}"/>
+    <apex:attribute name="numberOfColumns" description="The number of Columns to display" type="Integer" required="false" assignTo="{!NumColumns}"/>
+    <apex:attribute name="showAllRecords" description="Flag to show all records or NOT" type="Boolean" required="false" assignTo="{!showAll}"/>
+     <br/>
+
+        <ul>
+        <apex:variable var="cnt" value="{!0}" />
+            <apex:repeat value="{!recentUpdates}" var="news">
+                <li style="float:left; width:{!100/NumColumns}%; {!IF(CONTAINS(news.TagCSV, ContentTag)  && (cnt < 5 || showAll), '', 'display:none;')}">
+                    <apex:outputText value="{0, date, MMM dd, yyyy:}&nbsp;" styleClass="company_date" escape="false" >
+                        <apex:param value="{!news.Publish_Date__c}" />
+                    </apex:outputText>
+                    
+                    <apex:outputLink rendered="{!IF(news.Document_Type__c != 'Video',true,false)}" target="_blank" onclick="" value="/apex/ContentPreview?contentId={!news.Id}">{!news.Title}</apex:outputLink>
+                    <apex:outputLink rendered="{!IF(news.Document_Type__c == 'Video',true,false)}" target="_blank" onclick="" value="{!news.Video_File_Location__c}">{!news.Title}</apex:outputLink>
+                    
+                	<apex:outputPanel rendered="{!IF(CONTAINS(news.TagCSV, ContentTag), true, false)}">
+                		<apex:variable var="cnt" value="{!cnt+1}"/>
+                	</apex:outputPanel>
+                </li>            
+            </apex:repeat>
+            <li style="float:right; width:{!100/NumColumns}%;"></li>
+            <li style="float:right; width:100%;text-align: right;padding-top:45px;">
+                   <apex:outputLink rendered="{!IF(cnt>5 && $CurrentPage.Name!='EMP_HistoricalAnnouncements',true,false)}"  target="_self" onclick="" value="/apex/EMP_HistoricalAnnouncements?tagName={!ContentTag}&show=All"
+                   style="font-style: italic;">Show More</apex:outputLink>
+            </li>
+        </ul>
+        
+</apex:component>

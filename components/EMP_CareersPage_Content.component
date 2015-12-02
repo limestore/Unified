@@ -1,0 +1,22 @@
+<apex:component >
+    <div class="career_container">
+        <p><span class="career_span_head">Greenlight Your Career!</span></p>
+                
+        <p>Please <u><a class="career_link" target="_blank" href="https://www.logon.ds.adp.com/adfs/ls/IDPInitiatedSignon.aspx?LoginToRP=https://fed.adp.com"><b>Click here:</b></a> </u> for details of our current vacancies and to submit a Talent Scout referral.</p>
+         
+    <span class="career_span">-</span>       <b>Step 1</b>: Select Career Center<br/>
+    <br/>
+    <span class="career_span">-</span>       <b>Step 2</b>: Select Professional Login<br/>
+    <br/>
+       
+    <p>From here you can <b>search open positions</b>, set up <b>e-mail notifications</b> or even <b>submit a referral</b></p>
+    
+        <ul class="career_ul">
+            <li>Select 'Job Search/Talent Scout' to search by keywords like a job type and/or location</li>
+            <li>Once you select a job, you can choose to Apply or Refer</li>
+            <li>Pick ‘myJobAgent’ to customize e-mail alerts when positions of interest are open</li>
+            <li>Check out past referrals under  ‘My Referrals’</li>
+        </ul>        
+        <p>If you have any recruitment related questions, please contact your local HR team or recruiter.</p>
+    </div>
+</apex:component>

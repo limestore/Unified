@@ -1,0 +1,27 @@
+<apex:component controller="EMP_ITSupport_Application_Controller">
+    <apex:stylesheet value="{!URLFOR($Resource.EMP_Slick_Carousel,'/slick-1.3.15/slick/slick.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.7.2.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.EMP_Slick_Carousel, '/slick-1.3.15/slick/slick.min.js')}" />
+    
+    <div class="app-image">
+        <apex:repeat value="{!listApplicationImage}" var="img">
+            <div><a href="{!img.URL__c}" target="_blank"><apex:image title="{!img.Name}" url="{!img.Image_URL__c}" width="50" height="50" /></a></div>
+        </apex:repeat>
+    </div>
+    
+    <div class="dvShowMore">
+        <a href="http://hofpdsasccm01.ds.ad.adp.com/cmapplicationcatalog/#/SoftwareLibrary/AppListPageView.xaml" target="_blank">Show more</a>
+    </div>
+    
+    <script>
+    $(document).ready(function(){
+        $('.app-image').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            dots: true,
+            arrows:false
+        });
+    });
+    </script>
+</apex:component>

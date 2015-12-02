@@ -1,0 +1,21 @@
+<apex:page showHeader="true" sidebar="false" >
+<apex:stylesheet value="{!URLFOR($Resource.EMP_Portal_Content_css)}"/>
+    <div id="wrapper-body" class="portal">        
+        <div id="container" align="center">            
+            <div class="section-banner-sub">   
+                <div style="background-image:url('{!URLFOR($Resource.EMP_Career_Banner_Img)}');" class="section-banner-sub-details"></div>                      
+            </div>
+            <div class="section group">
+                <div id="sub-nav-container">
+                  <c:EMP_Submenu />
+                </div>                
+                <div id="content">
+                    <br/><br />
+                    <c:EMP_CareersPage_Content />
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+</apex:page>
